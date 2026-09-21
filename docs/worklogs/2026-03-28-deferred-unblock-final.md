@@ -42,7 +42,7 @@ Implemented 8 previously-deferred tasks across application-lifecycle, observabil
 
 ## RALPH Review Findings
 
-- F-003 (Minor, sustained): `silentLogger()` duplicated in 5 test files → recommend extracting to `@ipf/testing` in future
+- F-003 (Minor, sustained): `silentLogger()` duplicated in 5 test files → recommend extracting to `@hexcrawler/testing` in future
 - F-004 (Minor, sustained): `listening()` promise could hang → FIXED: added 5s bind timeout with clear error message
 
 ## Remaining Deferred Tasks

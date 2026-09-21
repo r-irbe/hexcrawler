@@ -10,7 +10,7 @@
 
 ## Context
 
-The IPF distributed crawler project has a comprehensive governance framework: 13 ADRs, 11 AI agents, 14 skills, 6 instructions, PR review council, memory promotion workflow, and documentation standards. However, nearly all processes are triggered manually. Analysis identified **134 automation opportunities** across 13 domains.
+The hexcrawler project has a comprehensive governance framework: 13 ADRs, 11 AI agents, 14 skills, 6 instructions, PR review council, memory promotion workflow, and documentation standards. However, nearly all processes are triggered manually. Analysis identified **134 automation opportunities** across 13 domains.
 
 Manual processes create:
 

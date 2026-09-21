@@ -4,9 +4,9 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, Worker, type ConnectionOptions, type Job } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema } from '@ipf/job-queue/connection-config';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema } from '@hexcrawler/job-queue/connection-config';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
 import { injectTraceContext, extractAndStartSpan } from './trace-propagation.js';
 import type { TraceCarrier } from './trace-propagation.js';
 

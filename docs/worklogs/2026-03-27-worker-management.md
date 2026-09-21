@@ -12,7 +12,7 @@ Implemented `packages/worker-management/` — worker utilization tracking, job c
 
 | File | Purpose |
 | --- | --- |
-| `packages/worker-management/package.json` | Package config with @ipf/core dependency |
+| `packages/worker-management/package.json` | Package config with @hexcrawler/core dependency |
 | `packages/worker-management/tsconfig.json` | TypeScript config extending base |
 | `packages/worker-management/vitest.config.ts` | Vitest config |
 | `packages/worker-management/eslint.config.js` | ESLint config |

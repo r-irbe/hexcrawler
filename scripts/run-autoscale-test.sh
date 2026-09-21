@@ -4,7 +4,7 @@
 # Design: docs/specs/load-test-observability/design.md §7
 set -euo pipefail
 
-NAMESPACE="${NAMESPACE:-ipf}"
+NAMESPACE="${NAMESPACE:-hexcrawler}"
 RESULTS_DIR="${RESULTS_DIR:-/tmp/autoscale-test-results}"
 API_URL="${API_URL:-http://localhost:3000}"
 SIMULATOR_HOST="${SIMULATOR_HOST:-http://mega-simulator:8080}"

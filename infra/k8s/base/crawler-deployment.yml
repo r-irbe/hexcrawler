@@ -1,4 +1,4 @@
-# IPF Crawler — Worker Deployment
+# hexcrawler — Worker Deployment
 # Implements: REQ-INFRA-004 (multiple replicas)
 #             REQ-INFRA-005 (liveness probe /health)
 #             REQ-INFRA-006 (readiness probe /readyz)
@@ -10,10 +10,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: crawler-worker
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: crawler-worker
-    app.kubernetes.io/part-of: ipf-crawler
+    app.kubernetes.io/part-of: hexcrawler
 spec:
   replicas: 2
   selector:
@@ -38,7 +38,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: crawler
-          image: ipf-crawler:latest
+          image: hexcrawler:latest
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -53,7 +53,7 @@ spec:
               protocol: TCP
           env:
             - name: SERVICE_NAME
-              value: ipf-crawler
+              value: hexcrawler
             - name: NODE_ENV
               value: production
             - name: METRICS_PORT

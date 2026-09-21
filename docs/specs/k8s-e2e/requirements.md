@@ -11,7 +11,7 @@
 The system shall provide a script (`scripts/setup-local.sh`) that creates a k3d cluster with a local registry, configurable node count, and port mappings.
 
 **REQ-K8E-002** (Ubiquitous)
-The setup script shall create a k3d registry at `k3d-ipf-registry.localhost:5111` before cluster creation.
+The setup script shall create a k3d registry at `k3d-hexcrawler-registry.localhost:5111` before cluster creation.
 
 **REQ-K8E-003** (Ubiquitous)
 The setup script shall be idempotent: running it when a cluster already exists shall skip creation or tear down and recreate.
@@ -30,11 +30,11 @@ When the setup script completes, the cluster shall have all nodes in `Ready` sta
 ```gherkin
 Given no k3d cluster exists
 When scripts/setup-local.sh runs
-Then a k3d cluster "ipf-local" is created
-And a local registry "k3d-ipf-registry.localhost:5111" is reachable
+Then a k3d cluster "hexcrawler-local" is created
+And a local registry "k3d-hexcrawler-registry.localhost:5111" is reachable
 And kubectl get nodes shows all nodes Ready
 
-Given an existing k3d cluster "ipf-local"
+Given an existing k3d cluster "hexcrawler-local"
 When scripts/setup-local.sh runs
 Then the existing cluster is deleted and recreated
 And no orphaned resources remain
@@ -62,7 +62,7 @@ When the image is pushed to the local registry, the Kustomize dev overlay shall 
 Given a running k3d cluster with local registry
 When the E2E image build runs
 Then the image is tagged with the git short SHA
-And the image is pushed to k3d-ipf-registry.localhost:5111
+And the image is pushed to k3d-hexcrawler-registry.localhost:5111
 And kubectl can pull the image from the local registry
 ```
 

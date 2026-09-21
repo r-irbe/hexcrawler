@@ -228,7 +228,7 @@ const POOL_CONFIG = {
 ## S3 Object Layout
 
 ```text
-bucket: ipf-crawl-pages
+bucket: hexcrawler-crawl-pages
 ├── {session_id}/
 │   ├── {domain}/
 │   │   ├── {url_hash}.html.zst    # Zstandard-compressed raw HTML

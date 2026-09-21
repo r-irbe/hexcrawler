@@ -8,7 +8,7 @@
 ```mermaid
 graph TB
     subgraph "k3d Cluster"
-        subgraph "IPF Namespace"
+        subgraph "hexcrawler namespace"
             CW1[Crawler Worker 1]
             CW2[Crawler Worker 2]
             CWN[Crawler Worker N]
@@ -203,21 +203,21 @@ kubectl wait --for=condition=available deploy/argocd-server -n argocd --timeout=
 ### 5.2 Application CRD
 
 ```yaml
-# infra/k8s/argocd/ipf-application.yml
+# infra/k8s/argocd/hexcrawler-application.yml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ipf-crawler
+  name: hexcrawler
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/<org>/ipf-crawler
+    repoURL: https://github.com/r-irbe/hexcrawler
     targetRevision: HEAD
     path: infra/k8s/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: ipf
+    namespace: hexcrawler
   syncPolicy:
     automated:
       prune: true
@@ -253,12 +253,12 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
   name: crawler-pod-kill
-  namespace: ipf
+  namespace: hexcrawler
 spec:
   action: pod-kill
   mode: one
   selector:
-    namespaces: [ipf]
+    namespaces: [hexcrawler]
     labelSelectors:
       app: crawler-worker
   scheduler:
@@ -273,7 +273,7 @@ spec:
   action: delay
   mode: all
   selector:
-    namespaces: [ipf]
+    namespaces: [hexcrawler]
     labelSelectors:
       app: crawler-worker
   delay:
@@ -289,7 +289,7 @@ metadata:
 spec:
   mode: one
   selector:
-    namespaces: [ipf]
+    namespaces: [hexcrawler]
     labelSelectors:
       app: crawler-worker
   stressors:
@@ -307,10 +307,10 @@ spec:
   action: error
   mode: all
   selector:
-    namespaces: [ipf]
+    namespaces: [hexcrawler]
     labelSelectors:
       app: crawler-worker
-  patterns: ["web-simulator.ipf.svc.cluster.local"]
+  patterns: ["web-simulator.hexcrawler.svc.cluster.local"]
   duration: "2m"
 ```
 

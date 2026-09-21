@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/application-lifecycle",
+  "name": "@hexcrawler/application-lifecycle",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -22,19 +22,19 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@ipf/config": "workspace:*",
-    "@ipf/core": "workspace:*",
-    "@ipf/crawl-pipeline": "workspace:*",
-    "@ipf/job-queue": "workspace:*",
-    "@ipf/observability": "workspace:*",
-    "@ipf/url-frontier": "workspace:*",
+    "@hexcrawler/config": "workspace:*",
+    "@hexcrawler/core": "workspace:*",
+    "@hexcrawler/crawl-pipeline": "workspace:*",
+    "@hexcrawler/job-queue": "workspace:*",
+    "@hexcrawler/observability": "workspace:*",
+    "@hexcrawler/url-frontier": "workspace:*",
     "neverthrow": "^8.2.0",
     "tsx": "^4.21.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
-    "@ipf/testing": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
+    "@hexcrawler/testing": "workspace:*",
     "@types/node": "^25.6.0",
     "bullmq": "^5.74.1",
     "eslint": "^10.2.0",

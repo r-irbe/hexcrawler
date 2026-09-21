@@ -95,7 +95,7 @@ const configSchema = z.object({
 
   // S3 / MinIO
   S3_ENDPOINT: z.string().url(),
-  S3_BUCKET: z.string().min(1).default('ipf-crawl-pages'),
+  S3_BUCKET: z.string().min(1).default('hexcrawler-crawl-pages'),
   S3_ACCESS_KEY: z.string().min(1),
   S3_SECRET_KEY: z.string().min(1),
 
@@ -103,7 +103,7 @@ const configSchema = z.object({
   CRAWL_MAX_DEPTH: z.coerce.number().int().min(0).max(100).default(3),
   CRAWL_RATE_LIMIT_PER_DOMAIN: z.coerce.number().int().min(100).default(2000),
   CRAWL_MAX_CONCURRENT_DOMAINS: z.coerce.number().int().min(1).default(100),
-  CRAWL_USER_AGENT: z.string().default('IPF-Crawler/1.0'),
+  CRAWL_USER_AGENT: z.string().default('hexcrawler/1.0'),
 
   // Observability
   OTEL_EXPORTER_OTLP_ENDPOINT: z.string().url().default('http://otel-collector:4318'),
@@ -142,17 +142,17 @@ export function loadConfig(): Config {
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ipf-config
+  name: hexcrawler-config
 data:
   NODE_ENV: "production"
   LOG_LEVEL: "info"
   REDIS_URL: "redis://dragonfly:6379"
   S3_ENDPOINT: "http://minio:9000"
-  S3_BUCKET: "ipf-crawl-pages"
+  S3_BUCKET: "hexcrawler-crawl-pages"
   OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector:4318"
   CRAWL_MAX_DEPTH: "3"
   CRAWL_RATE_LIMIT_PER_DOMAIN: "2000"
-  CRAWL_USER_AGENT: "IPF-Crawler/1.0"
+  CRAWL_USER_AGENT: "hexcrawler/1.0"
   HEALTH_PORT: "8081"
 ```
 
@@ -161,24 +161,24 @@ data:
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: ipf-secrets
+  name: hexcrawler-secrets
 spec:
   refreshInterval: 1h
   secretStoreRef:
     name: aws-secrets-manager  # or vault, gcp-sm
     kind: ClusterSecretStore
   target:
-    name: ipf-secrets
+    name: hexcrawler-secrets
   data:
     - secretKey: DATABASE_URL
       remoteRef:
-        key: ipf/database-url
+        key: hexcrawler/database-url
     - secretKey: S3_ACCESS_KEY
       remoteRef:
-        key: ipf/s3-access-key
+        key: hexcrawler/s3-access-key
     - secretKey: S3_SECRET_KEY
       remoteRef:
-        key: ipf/s3-secret-key
+        key: hexcrawler/s3-secret-key
 ```
 
 ```yaml
@@ -188,9 +188,9 @@ spec:
     - name: worker
       envFrom:
         - configMapRef:
-            name: ipf-config
+            name: hexcrawler-config
         - secretRef:
-            name: ipf-secrets
+            name: hexcrawler-secrets
 ```
 
 ## Consequences

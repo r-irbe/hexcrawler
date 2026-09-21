@@ -7,7 +7,7 @@ import { CircuitState } from 'cockatiel';
 import {
   startPostgresContainer,
   type ManagedPostgresContainer,
-} from '@ipf/testing/containers/postgres';
+} from '@hexcrawler/testing/containers/postgres';
 import { createPool, type PoolConfig } from './connection/pool.js';
 import { createDatabaseCircuitBreaker } from './connection/circuit-breaker.js';
 import { createShutdownHandle } from './connection/shutdown.js';

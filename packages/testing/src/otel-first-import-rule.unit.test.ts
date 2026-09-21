@@ -11,9 +11,9 @@ function lintCode(code: string): Linter.LintMessage[] {
   return linter.verify(code, [
     {
       plugins: {
-        '@ipf': { rules: { 'otel-first-import': otelFirstImport } },
+        '@hexcrawler': { rules: { 'otel-first-import': otelFirstImport } },
       },
-      rules: { '@ipf/otel-first-import': 'error' },
+      rules: { '@hexcrawler/otel-first-import': 'error' },
       languageOptions: { ecmaVersion: 2022, sourceType: 'module' },
     },
   ]);

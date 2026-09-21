@@ -29,7 +29,7 @@ export function injectTraceContext(carrier: TraceCarrier): TraceCarrier {
 export function extractAndStartSpan(
   carrier: TraceCarrier,
   spanName: string,
-  tracerName: string = 'ipf-observability',
+  tracerName: string = 'hexcrawler-observability',
 ): { span: Span; end: () => void } {
   const parentContext = propagation.extract(context.active(), carrier);
   const tracer = trace.getTracer(tracerName);

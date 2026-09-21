@@ -20,7 +20,7 @@ Full audit of all 14 MUST rules from AGENTS.md §Coding Rules:
 | 7 | Zod schema-first | PASS | Config schemas defined before handler code (`config-schema.ts` pattern) |
 | 8 | Real infra tests | PASS | 0 `vi.mock`/`jest.mock` in `*.integration.test.ts` (grep verified) |
 | 9 | OTel first import | FAIL | TODO comment in `main.ts` — deferred until SDK wiring ready |
-| 10 | Graceful shutdown | PASS | SIGTERM/SIGINT handlers in `main.ts` + `@ipf/application-lifecycle` orchestration |
+| 10 | Graceful shutdown | PASS | SIGTERM/SIGINT handlers in `main.ts` + `@hexcrawler/application-lifecycle` orchestration |
 | 11 | No secrets in code | PASS | 0 hardcoded secrets; External Secrets Operator strategy; gitleaks CI scan |
 | 12 | Guard function chain | PASS | `pnpm turbo typecheck/lint/test` — 18/18 all pass; pre-commit gate enforced |
 | 13 | Feature branches | PASS | Git hooks block commits to `main`; all work on `work/<slug>` branches |

@@ -2,10 +2,10 @@
 // Implements: T-CRAWL-009, REQ-CRAWL-005, REQ-CRAWL-006
 
 import { ok, err } from 'neverthrow';
-import type { Fetcher, FetchConfig } from '@ipf/core/contracts/fetcher';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { Fetcher, FetchConfig } from '@hexcrawler/core/contracts/fetcher';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { parseCrawlUrl } from './crawl-url-factory.js';
 import type { CrawlFrontierEntry, CrawlFetchResult } from './crawl-types.js';
 

@@ -17,7 +17,7 @@ import {
   ATTR_SERVICE_NAME,
   ATTR_SERVICE_VERSION,
 } from '@opentelemetry/semantic-conventions';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export interface TracerConfig {
   readonly serviceName: string;

@@ -3,7 +3,7 @@
 // Implements: T-COMM-024
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Redis } from 'ioredis';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createRedisStreamPublisher, type StreamEvent } from './stream-publisher.js';
 import { createRedisStreamConsumer } from './stream-consumer.js';
 

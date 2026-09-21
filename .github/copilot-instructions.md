@@ -1,4 +1,4 @@
-# GitHub Copilot Instructions for IPF Crawler
+# GitHub Copilot Instructions for hexcrawler
 
 > Extends [AGENTS.md](../AGENTS.md) (binding). This file adds **only** Copilot-specific guidance.
 

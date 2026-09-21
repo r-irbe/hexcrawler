@@ -5,7 +5,7 @@
 | Date | 2026-03-27 |
 | Branch | `work/completion-detection` |
 | Commits | `d01b5e2`, `c824fa5` |
-| Package | `@ipf/completion-detection` |
+| Package | `@hexcrawler/completion-detection` |
 | Spec | `docs/specs/completion-detection/` |
 
 ## Summary

@@ -25,11 +25,11 @@ while [[ "$ATTEMPT" -lt "$MAX_ATTEMPTS" && "$PASSED" == "false" ]]; do
   # --- Typecheck ---
   echo "▸ typecheck..."
   set +e
-  pnpm turbo typecheck --force 2>&1 | tee /tmp/ipf-typecheck.log | tail -3
+  pnpm turbo typecheck --force 2>&1 | tee /tmp/hexcrawler-typecheck.log | tail -3
   TC_EXIT=${PIPESTATUS[0]}
   set -e
   if [[ "$TC_EXIT" -eq 0 ]]; then
-    TC_RESULT=$(grep -c "successful" /tmp/ipf-typecheck.log || true)
+    TC_RESULT=$(grep -c "successful" /tmp/hexcrawler-typecheck.log || true)
     echo "  ✓ typecheck passed ($TC_RESULT packages)"
   else
     echo "  ✗ typecheck FAILED (exit $TC_EXIT)"
@@ -41,7 +41,7 @@ while [[ "$ATTEMPT" -lt "$MAX_ATTEMPTS" && "$PASSED" == "false" ]]; do
   if [[ -z "$GATE_FAILED" ]]; then
     echo "▸ lint..."
     set +e
-    pnpm turbo lint --force 2>&1 | tee /tmp/ipf-lint.log | tail -3
+    pnpm turbo lint --force 2>&1 | tee /tmp/hexcrawler-lint.log | tail -3
     LINT_EXIT=${PIPESTATUS[0]}
     set -e
     if [[ "$LINT_EXIT" -eq 0 ]]; then
@@ -57,11 +57,11 @@ while [[ "$ATTEMPT" -lt "$MAX_ATTEMPTS" && "$PASSED" == "false" ]]; do
   if [[ -z "$GATE_FAILED" ]]; then
     echo "▸ test (unit)..."
     set +e
-    pnpm turbo test --force 2>&1 | tee /tmp/ipf-test.log | tail -5
+    pnpm turbo test --force 2>&1 | tee /tmp/hexcrawler-test.log | tail -5
     TEST_EXIT=${PIPESTATUS[0]}
     set -e
     if [[ "$TEST_EXIT" -eq 0 ]]; then
-      TEST_COUNT=$(grep -oE "[0-9]+ passed" /tmp/ipf-test.log | awk '{s+=$1} END {print s+0}')
+      TEST_COUNT=$(grep -oE "[0-9]+ passed" /tmp/hexcrawler-test.log | awk '{s+=$1} END {print s+0}')
       echo "  ✓ test passed ($TEST_COUNT tests total)"
     else
       echo "  ✗ test FAILED (exit $TEST_EXIT)"
@@ -74,15 +74,15 @@ while [[ "$ATTEMPT" -lt "$MAX_ATTEMPTS" && "$PASSED" == "false" ]]; do
   if [[ -z "$GATE_FAILED" ]]; then
     echo "▸ test:integration..."
     set +e
-    pnpm turbo test:integration --force 2>&1 | tee /tmp/ipf-integration.log | tail -5
+    pnpm turbo test:integration --force 2>&1 | tee /tmp/hexcrawler-integration.log | tail -5
     INT_EXIT=${PIPESTATUS[0]}
     set -e
     if [[ "$INT_EXIT" -eq 0 ]]; then
-      INT_COUNT=$(grep -oE "[0-9]+ passed" /tmp/ipf-integration.log | awk '{s+=$1} END {print s+0}')
+      INT_COUNT=$(grep -oE "[0-9]+ passed" /tmp/hexcrawler-integration.log | awk '{s+=$1} END {print s+0}')
       echo "  ✓ integration passed ($INT_COUNT tests total)"
     else
       echo "  ✗ integration FAILED (exit $INT_EXIT)"
-      grep -A5 "container\|Container\|TESTCONTAINER" /tmp/ipf-integration.log 2>/dev/null || true
+      grep -A5 "container\|Container\|TESTCONTAINER" /tmp/hexcrawler-integration.log 2>/dev/null || true
       GATE_FAILED="test:integration"
     fi
     echo ""
@@ -92,11 +92,11 @@ while [[ "$ATTEMPT" -lt "$MAX_ATTEMPTS" && "$PASSED" == "false" ]]; do
   if [[ -z "$GATE_FAILED" ]]; then
     echo "▸ test:property..."
     set +e
-    pnpm turbo test:property --force 2>&1 | tee /tmp/ipf-property.log | tail -5
+    pnpm turbo test:property --force 2>&1 | tee /tmp/hexcrawler-property.log | tail -5
     PROP_EXIT=${PIPESTATUS[0]}
     set -e
     if [[ "$PROP_EXIT" -eq 0 ]]; then
-      PROP_COUNT=$(grep -oE "[0-9]+ passed" /tmp/ipf-property.log | awk '{s+=$1} END {print s+0}')
+      PROP_COUNT=$(grep -oE "[0-9]+ passed" /tmp/hexcrawler-property.log | awk '{s+=$1} END {print s+0}')
       echo "  ✓ property passed ($PROP_COUNT tests total)"
     else
       echo "  ✗ property FAILED (exit $PROP_EXIT)"
@@ -134,6 +134,6 @@ else
   echo "Failed gate: $GATE_FAILED"
   echo "Action: STOP, report to user, do NOT commit."
   echo ""
-  echo "Logs: /tmp/ipf-typecheck.log, /tmp/ipf-lint.log, /tmp/ipf-test.log, /tmp/ipf-integration.log, /tmp/ipf-property.log"
+  echo "Logs: /tmp/hexcrawler-typecheck.log, /tmp/hexcrawler-lint.log, /tmp/hexcrawler-test.log, /tmp/hexcrawler-integration.log, /tmp/hexcrawler-property.log"
   exit 1
 fi

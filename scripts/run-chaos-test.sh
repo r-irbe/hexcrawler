@@ -5,7 +5,7 @@
 set -euo pipefail
 
 NAMESPACE="${CHAOS_NAMESPACE:-chaos-mesh}"
-MONITORING_NS="${MONITORING_NAMESPACE:-ipf}"
+MONITORING_NS="${MONITORING_NAMESPACE:-hexcrawler}"
 CHAOS_DIR="infra/k8s/chaos"
 RESULTS_DIR="${RESULTS_DIR:-/tmp/chaos-test-results}"
 mkdir -p "$RESULTS_DIR"
@@ -43,9 +43,9 @@ check_prereqs() {
   log "Chaos Mesh CRDs found"
 
   # Pause ArgoCD auto-sync during chaos tests to prevent self-heal interference (F-015)
-  if kubectl get app ipf-crawler -n argocd &>/dev/null; then
-    log "Pausing ArgoCD auto-sync for ipf-crawler..."
-    kubectl patch app ipf-crawler -n argocd --type merge \
+  if kubectl get app hexcrawler -n argocd &>/dev/null; then
+    log "Pausing ArgoCD auto-sync for hexcrawler..."
+    kubectl patch app hexcrawler -n argocd --type merge \
       -p '{"spec":{"syncPolicy":{"automated":null}}}' 2>/dev/null || \
       log "WARNING: Could not pause ArgoCD sync"
   fi
@@ -65,7 +65,7 @@ snapshot_metrics() {
   fi
 
   # Capture pod status (always works)
-  kubectl get pods -n ipf -o wide > "$RESULTS_DIR/${phase}-pods.txt" 2>/dev/null || true
+  kubectl get pods -n hexcrawler -o wide > "$RESULTS_DIR/${phase}-pods.txt" 2>/dev/null || true
 }
 
 apply_chaos() {
@@ -89,9 +89,9 @@ cleanup() {
   done
 
   # Restore ArgoCD auto-sync
-  if kubectl get app ipf-crawler -n argocd &>/dev/null; then
+  if kubectl get app hexcrawler -n argocd &>/dev/null; then
     log "Restoring ArgoCD auto-sync..."
-    kubectl patch app ipf-crawler -n argocd --type merge \
+    kubectl patch app hexcrawler -n argocd --type merge \
       -p '{"spec":{"syncPolicy":{"automated":{"prune":true,"selfHeal":true}}}}' 2>/dev/null || true
   fi
 

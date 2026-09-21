@@ -1,4 +1,4 @@
-# IPF Crawler — PostgreSQL StatefulSet
+# hexcrawler — PostgreSQL StatefulSet
 # Implements: REQ-DATA-001 (PostgreSQL for structured crawl metadata)
 #             REQ-DATA-017 (connection pooling via application-level pool)
 # Design: docs/specs/data-layer/design.md §Connection Pool
@@ -9,10 +9,10 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgresql
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: postgresql
-    app.kubernetes.io/part-of: ipf-crawler
+    app.kubernetes.io/part-of: hexcrawler
 spec:
   serviceName: postgresql
   replicas: 1
@@ -47,7 +47,7 @@ spec:
                   key: POSTGRES_PASSWORD
                   optional: true
             - name: POSTGRES_DB
-              value: ipf
+              value: hexcrawler
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
           ports:
@@ -88,7 +88,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgresql
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: postgresql
 spec:

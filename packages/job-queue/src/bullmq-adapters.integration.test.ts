@@ -2,12 +2,12 @@
 // Validates: T-DIST-007, ADR-002, ADR-007 (real infra, no mocks)
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createBullMQQueueBackend, type QueueBackend, type JobSpec } from './bullmq-queue-backend.js';
 import { createBullMQJobConsumer, type CrawlJobData } from './bullmq-job-consumer.js';
 import { createBullMQQueueAdapter, type QueueAdapter } from './bullmq-queue-adapter.js';
 import { BullMQConnectionSchema, QueueConfigSchema, type BullMQConnection } from './connection-config.js';
-import type { JobConsumer } from '@ipf/core/contracts/job-consumer';
+import type { JobConsumer } from '@hexcrawler/core/contracts/job-consumer';
 import type { Job } from 'bullmq';
 
 let redis: ManagedRedisContainer;

@@ -2,7 +2,7 @@
 // Validates: T-LIFE-045 → REQ-LIFE-029
 
 import { describe, it, expect, afterEach } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createReadinessProbe } from './readiness-probe.js';
 import type { ReadinessProbeHandle } from './readiness-probe.js';
 

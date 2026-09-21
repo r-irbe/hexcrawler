@@ -4,7 +4,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { attachErrorHandler } from './error-handler-attachment.js';
 import type { ErrorEmitter } from './error-handler-attachment.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 function createTestEmitter(): ErrorEmitter & { fireError: (err: Error) => void } {
   let handler: ((err: Error) => void) | undefined;

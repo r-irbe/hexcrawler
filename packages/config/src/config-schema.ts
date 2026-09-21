@@ -26,7 +26,7 @@ export const ConfigSchema = z.object({
 
   // S3 / MinIO
   S3_ENDPOINT: z.url(),
-  S3_BUCKET: z.string().min(1).default('ipf-crawl-pages'),
+  S3_BUCKET: z.string().min(1).default('hexcrawler-crawl-pages'),
   S3_ACCESS_KEY: z.string().min(1),
   S3_SECRET_KEY: z.string().min(1),
 
@@ -41,7 +41,7 @@ export const ConfigSchema = z.object({
   CRAWL_MAX_RETRIES: z.coerce.number().int().min(0).max(20).default(3),
   CRAWL_MAX_REDIRECTS: z.coerce.number().int().min(0).max(20).default(5),
   CRAWL_MAX_RESPONSE_BYTES: z.coerce.number().int().min(1024).default(10_485_760),
-  CRAWL_USER_AGENT: z.string().default('IPF-Crawler/1.0'),
+  CRAWL_USER_AGENT: z.string().default('hexcrawler/1.0'),
   ALLOW_PRIVATE_IPS: z.enum(['true', 'false']).default('false').transform((v) => v === 'true'),
   ALLOWED_DOMAINS: z.string().optional(),
 

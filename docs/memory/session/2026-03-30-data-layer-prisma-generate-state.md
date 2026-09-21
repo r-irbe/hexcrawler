@@ -38,4 +38,4 @@
 1. **Generated files not committed** — `src/generated/` is 22MB, added to `.gitignore`. Regenerated via `pnpm build` (prisma generate). Turbo caches output.
 2. **Build script = prisma generate** — Database package `build` script runs `prisma generate` so Turbo dependency chain ensures types exist before typecheck/lint/test.
 3. **Migration created via `prisma migrate diff`** — No live DB needed. SQL verified against schema. Migration directory `20260330000000_initial` follows Prisma convention.
-4. **Re-export module** — `prisma-client.ts` re-exports PrismaClient + types from generated code, so consumers import from `@ipf/database/prisma`.
+4. **Re-export module** — `prisma-client.ts` re-exports PrismaClient + types from generated code, so consumers import from `@hexcrawler/database/prisma`.

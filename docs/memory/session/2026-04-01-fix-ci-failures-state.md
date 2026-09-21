@@ -6,7 +6,7 @@
 | --- | --- |
 | Date | 2026-04-01 |
 | Branch | `work/fix-ci-failures` |
-| User request | Fix failing GitHub Actions after initial push to r-irbe/octupus-crawler |
+| User request | Fix failing GitHub Actions after initial push to r-irbe/hexcrawler |
 | Scope | .github/workflows/, package.json, .changeset/config.json |
 
 ## Task Queue
@@ -15,7 +15,7 @@
 | --- | --- | --- | --- | --- |
 | 1 | Fix release.yml YAML parse error | `done` | 01b5646 | Indented `Full commit:`, then switched to `-m` flags |
 | 2 | Fix onlyBuiltDependencies corruption | `done` | 01b5646 | 9 actual package names |
-| 3 | Fix changeset config repo reference | `done` | 01b5646 | `r-irbe/octupus-crawler` |
+| 3 | Fix changeset config repo reference | `done` | 01b5646 | `r-irbe/hexcrawler` |
 
 ## Current State
 
@@ -38,7 +38,7 @@
 ### version-packages.yml
 - `pnpm install --frozen-lockfile` succeeded (8s)
 - `changesets/action@v1` "Create Release PR or Publish" step failed (1s)
-- `.changeset/config.json` references `"repo": "ipf-org/ipf"` (non-existent)
+- `.changeset/config.json` references `"repo": "r-irbe/hexcrawler"` (non-existent)
 - changelog plugin `@changesets/changelog-github` needs valid repo for PR reference
 
 ### package.json onlyBuiltDependencies

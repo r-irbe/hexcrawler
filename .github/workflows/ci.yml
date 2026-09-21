@@ -121,7 +121,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Test ${{ matrix.package }}
-        run: pnpm turbo test --filter=@ipf/${{ matrix.package }}
+        run: pnpm turbo test --filter=@hexcrawler/${{ matrix.package }}
 
   # T-CICD-021: Architecture conformance checks (REQ-CICD-022)
   # Barrel imports, file size limits, dependency direction

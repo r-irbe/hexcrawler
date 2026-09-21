@@ -62,7 +62,7 @@ assert_latency_gt() {
 
 record_state() {
   local phase=$1
-  local ns=${NAMESPACE:-ipf}
+  local ns=${NAMESPACE:-hexcrawler}
   local dir=${RESULTS_DIR:-/tmp/k8s-e2e-results}
   kubectl get pods -n "$ns" -o wide > "$dir/${phase}-pods.txt" 2>/dev/null || true
   kubectl get hpa -n "$ns" -o wide > "$dir/${phase}-hpa.txt" 2>/dev/null || true
@@ -71,13 +71,13 @@ record_state() {
 
 wait_for_ready() {
   local deploy=$1 timeout=${2:-120}
-  local ns=${NAMESPACE:-ipf}
+  local ns=${NAMESPACE:-hexcrawler}
   log "Waiting for $deploy to be ready (${timeout}s timeout)..."
   kubectl wait --for=condition=available "deploy/$deploy" -n "$ns" --timeout="${timeout}s" 2>/dev/null
 }
 
 get_replicas() {
-  local ns=${NAMESPACE:-ipf}
+  local ns=${NAMESPACE:-hexcrawler}
   kubectl get deployment crawler-worker -n "$ns" \
     -o jsonpath='{.status.readyReplicas}' 2>/dev/null || echo "0"
 }

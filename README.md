@@ -1,6 +1,6 @@
-# IPF — Distributed Web Crawler
+# hexcrawler
 
-Horizontally-scalable web crawler. TypeScript, BullMQ workers, hexagonal architecture, real-infrastructure testing.
+Horizontally scaled TypeScript crawler: hexagonal architecture, BullMQ workers, RFC 6890 SSRF-safe redirects, per-domain circuit breakers, typed `Result<T, E>` errors, Testcontainers, and k3d chaos testing.
 
 Crawls URLs via a priority queue, enforces per-domain rate limits, validates every redirect against RFC 6890 SSRF ranges, and stores results in PostgreSQL + S3. Workers scale independently behind circuit breakers. All errors are typed (`Result<T, E>`), never thrown.
 

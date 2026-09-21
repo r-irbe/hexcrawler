@@ -2,7 +2,7 @@
 // Validates REQ-RES-016 (DLQ on exhaustion), REQ-RES-017 (DLQ events)
 // Implements: T-RES-025
 import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createDLQHandler, type DLQJobData } from './dlq-handler.js';
 
 describe('DLQHandler (integration)', () => {

@@ -1,4 +1,4 @@
-# IPF Crawler — Dragonfly StatefulSet
+# hexcrawler — Dragonfly StatefulSet
 # Implements: REQ-INFRA-009 (persistence via PVC + appendonly)
 #             REQ-INFRA-010 (health endpoint)
 # Design: docs/specs/infrastructure/design.md §3
@@ -7,10 +7,10 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: dragonfly
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: dragonfly
-    app.kubernetes.io/part-of: ipf-crawler
+    app.kubernetes.io/part-of: hexcrawler
 spec:
   serviceName: dragonfly
   replicas: 1
@@ -74,7 +74,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dragonfly
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: dragonfly
 spec:

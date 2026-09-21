@@ -1,6 +1,6 @@
 # Agents
 
-AI agent definitions for the IPF crawler. Each agent is a specialist routed by the Gateway.
+AI agent definitions for hexcrawler. Each agent is a specialist routed by the Gateway.
 
 ## Orchestration
 

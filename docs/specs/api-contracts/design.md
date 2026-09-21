@@ -17,7 +17,7 @@ graph LR
 
 ## 2. OpenAPI Spec Structure
 
-The spec follows OpenAPI 3.1 and defines the IPF Crawler management API.
+The spec follows OpenAPI 3.1 and defines the hexcrawler management API.
 
 ### Endpoints
 

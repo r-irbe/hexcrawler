@@ -2,7 +2,7 @@
 // Implements: T-OBS-001, T-OBS-002, T-OBS-003, REQ-OBS-001..004
 
 import pino from 'pino';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export interface PinoLoggerConfig {
   readonly level: string;

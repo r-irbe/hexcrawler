@@ -5,7 +5,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-config
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: prometheus
 data:
@@ -20,7 +20,7 @@ data:
         kubernetes_sd_configs:
           - role: pod
             namespaces:
-              names: ["ipf"]
+              names: ["hexcrawler"]
         relabel_configs:
           - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
             action: keep
@@ -45,7 +45,7 @@ data:
         kubernetes_sd_configs:
           - role: pod
             namespaces:
-              names: ["ipf"]
+              names: ["hexcrawler"]
         relabel_configs:
           - source_labels: [__meta_kubernetes_pod_label_app]
             action: keep
@@ -57,7 +57,7 @@ data:
             replacement: $1:8080
   alert-rules.yml: |
     groups:
-      - name: ipf-crawler-alerts
+      - name: hexcrawler-alerts
         rules:
           - alert: HighErrorRate
             expr: |
@@ -89,7 +89,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: prometheus
 spec:
@@ -157,7 +157,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: prometheus
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: prometheus
 spec:
@@ -172,12 +172,12 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: prometheus
-  namespace: ipf
+  namespace: hexcrawler
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: prometheus-ipf
+  name: prometheus-hexcrawler
 rules:
   - apiGroups: [""]
     resources: ["pods", "nodes", "endpoints", "services"]
@@ -186,12 +186,12 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: prometheus-ipf
+  name: prometheus-hexcrawler
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: prometheus-ipf
+  name: prometheus-hexcrawler
 subjects:
   - kind: ServiceAccount
     name: prometheus
-    namespace: ipf
+    namespace: hexcrawler

@@ -3,9 +3,9 @@
 
 import type { Readable } from 'node:stream';
 import { ok, err, type Result } from 'neverthrow';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { FetchError } from '@ipf/core/errors/fetch-error';
-import type { SsrfValidationResult } from '@ipf/ssrf-guard/ssrf-types';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
+import type { SsrfValidationResult } from '@hexcrawler/ssrf-guard/ssrf-types';
 import type { FetchMetrics } from './fetch-types.js';
 import { NULL_FETCH_METRICS } from './fetch-types.js';
 import {
@@ -40,7 +40,7 @@ export type HttpResponse = {
 
 /**
  * SSRF validator — returns SsrfValidationResult or null (no validation).
- * Contract: @ipf/ssrf-guard/ssrf-types.SsrfValidationResult
+ * Contract: @hexcrawler/ssrf-guard/ssrf-types.SsrfValidationResult
  */
 export type SsrfValidator = (url: URL) => Promise<SsrfValidationResult | null>;
 

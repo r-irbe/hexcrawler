@@ -83,7 +83,7 @@ Findings that resulted in spec or implementation changes (living specs per AGENT
 | F-004 | 1+2 | Minor | `wrapPino` not exported from package | Exported from package.json → updated design.md §2 |
 | F-006 | 1+2 | Info | Missing test for recordFetch without error_kind | Added test case |
 | F-014 | 4 | Minor | No span capture integration test | Added tracer-spans.unit.test.ts (Phase 6) |
-| F-015 | 4 | Minor | Hardcoded tracer name in extractAndStartSpan | Parameterised with default `'ipf-observability'` → updated design.md §5 |
+| F-015 | 4 | Minor | Hardcoded tracer name in extractAndStartSpan | Parameterised with default `'hexcrawler-observability'` → updated design.md §5 |
 | F-017 | 5 | Minor | Default sampling silently changed to 10% | Added JSDoc + updated REQ-OBS-027 with test guidance |
 
 ---

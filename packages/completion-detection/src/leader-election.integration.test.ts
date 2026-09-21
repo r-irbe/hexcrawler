@@ -4,8 +4,8 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createClient, type RedisClientType } from 'redis';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import type { Logger } from '@ipf/core/contracts/logger';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createLeaderElection, type LeaseStore, type LeaderElectionConfig } from './leader-election.js';
 import { buildConnectionUrl, parseConnectionUrl } from './state-store-connection.js';
 import { createFailoverController } from './failover-controller.js';

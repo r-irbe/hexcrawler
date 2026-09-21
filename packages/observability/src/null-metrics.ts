@@ -1,7 +1,7 @@
 // NullMetrics — no-op CrawlMetrics implementation for tests
 // Implements: T-OBS-012, REQ-OBS-018
 
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 
 export class NullMetrics implements CrawlMetrics {
   recordFetch(_status: string, _errorKind?: string): void {

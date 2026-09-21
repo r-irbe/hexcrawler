@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/resilience",
+  "name": "@hexcrawler/resilience",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@fast-check/vitest": "^0.4.0",
-    "@ipf/eslint-config": "workspace:*",
-    "@ipf/testing": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
+    "@hexcrawler/testing": "workspace:*",
     "@types/node": "^22.19.17",
     "eslint": "^10.2.0",
     "fast-check": "^4.6.0",

@@ -1,7 +1,7 @@
 // Consumer startup phase — start job consumer before seeding
 // Implements: T-LIFE-009, REQ-LIFE-006
 
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { StartupPhase } from './startup-orchestrator.js';
 
 export type ConsumerLike = {

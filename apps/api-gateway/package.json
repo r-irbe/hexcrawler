@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/api-gateway",
+  "name": "@hexcrawler/api-gateway",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -13,15 +13,15 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@ipf/api-router": "workspace:*",
-    "@ipf/config": "workspace:*",
+    "@hexcrawler/api-router": "workspace:*",
+    "@hexcrawler/config": "workspace:*",
     "@trpc/server": "^11.16.0",
     "fastify": "^5.8.5",
     "neverthrow": "^8.2.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
     "@types/node": "^22.19.17",
     "eslint": "^10.2.0",
     "tsx": "^4.21.0",

@@ -1,19 +1,19 @@
-// main.ts — IPF Crawler composition root
+// main.ts — hexcrawler composition root
 // Implements: REQ-LIFE-001 to REQ-LIFE-032, T-LIFE-018
 // Design: docs/specs/application-lifecycle/design.md §1
 
 import { ok } from 'neverthrow';
-import { loadConfig } from '@ipf/config/load-config';
-import { createPinoLogger } from '@ipf/observability/pino-logger';
-import { createTracer } from '@ipf/observability/tracer';
-import { createMetricsServer } from '@ipf/observability/metrics-server';
-import { createPromMetrics } from '@ipf/observability/prom-metrics';
-import { parseRedisUrl, QueueConfigSchema } from '@ipf/job-queue/connection-config';
-import { createBullMQQueueBackend } from '@ipf/job-queue/bullmq-queue-backend';
-import { createBullMQJobConsumer } from '@ipf/job-queue/bullmq-job-consumer';
-import { createFrontierAdapter } from '@ipf/url-frontier/frontier-adapter';
-import { parseCrawlUrl } from '@ipf/crawl-pipeline/crawl-url-factory';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import { loadConfig } from '@hexcrawler/config/load-config';
+import { createPinoLogger } from '@hexcrawler/observability/pino-logger';
+import { createTracer } from '@hexcrawler/observability/tracer';
+import { createMetricsServer } from '@hexcrawler/observability/metrics-server';
+import { createPromMetrics } from '@hexcrawler/observability/prom-metrics';
+import { parseRedisUrl, QueueConfigSchema } from '@hexcrawler/job-queue/connection-config';
+import { createBullMQQueueBackend } from '@hexcrawler/job-queue/bullmq-queue-backend';
+import { createBullMQJobConsumer } from '@hexcrawler/job-queue/bullmq-job-consumer';
+import { createFrontierAdapter } from '@hexcrawler/url-frontier/frontier-adapter';
+import { parseCrawlUrl } from '@hexcrawler/crawl-pipeline/crawl-url-factory';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import {
   validateConfig,
   validateSeeds,
@@ -186,7 +186,7 @@ void safeMain(
       parseCrawlUrl,
     });
 
-    logger.info('IPF Crawler started', { workerId, seedCount: seeds.length });
+    logger.info('hexcrawler started', { workerId, seedCount: seeds.length });
     // Process stays alive via Redis connection + HTTP servers
   },
   {

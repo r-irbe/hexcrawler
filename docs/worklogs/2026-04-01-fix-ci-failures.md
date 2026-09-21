@@ -2,7 +2,7 @@
 
 **Date**: 2026-04-01
 **Branch**: `work/fix-ci-failures`
-**Scope**: GitHub Actions workflow fixes after initial push to r-irbe/octupus-crawler
+**Scope**: GitHub Actions workflow fixes after initial push to r-irbe/hexcrawler
 
 ## What Changed
 
@@ -10,14 +10,14 @@
 
 1. **release.yml** — `Full commit:` line at column 0 broke `run: |` YAML block (GitHub error: `Unexpected value 'Full commit'` at L135)
 2. **package.json** — `onlyBuiltDependencies` corrupted by malformed `pnpm approve-builds` (individual characters instead of package names)
-3. **version-packages.yml** — `.changeset/config.json` referenced non-existent repo `ipf-org/ipf`
+3. **version-packages.yml** — `.changeset/config.json` referenced non-existent repo `r-irbe/hexcrawler`
 4. **10 vitest configs** — Integration tests (requiring Docker/Testcontainers) included in default `test` command; fail when Docker is not running
 
 ### Files Modified
 
 - `.github/workflows/release.yml` — Use separate `-m` flags for commit subject/body
 - `package.json` — Fix `onlyBuiltDependencies` to 9 actual package names
-- `.changeset/config.json` — Fix repo to `r-irbe/octupus-crawler`
+- `.changeset/config.json` — Fix repo to `r-irbe/hexcrawler`
 - 10× `packages/*/vitest.config.ts` — Add `exclude: ['src/**/*.integration.test.ts']` to test section
 
 ## RALPH Review

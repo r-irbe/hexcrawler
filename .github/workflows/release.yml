@@ -114,7 +114,7 @@ jobs:
           SHORT_TAG="sha-${GITHUB_SHA::7}"
           cd infra/k8s/base
           kustomize edit set image \
-            "ipf-crawler=${IMAGE_PREFIX}/crawler:${SHORT_TAG}"
+            "hexcrawler=${IMAGE_PREFIX}/crawler:${SHORT_TAG}"
 
       - name: Commit and push
         run: |

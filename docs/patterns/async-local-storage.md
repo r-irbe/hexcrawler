@@ -9,7 +9,7 @@
 
 ## Overview
 
-Node.js `AsyncLocalStorage` (from `node:async_hooks`) provides request-scoped context that propagates automatically through the async call chain — without threading context parameters through every function signature. This is the canonical mechanism for correlation IDs, tenant context, trace propagation, and per-request metadata in IPF services.
+Node.js `AsyncLocalStorage` (from `node:async_hooks`) provides request-scoped context that propagates automatically through the async call chain — without threading context parameters through every function signature. This is the canonical mechanism for correlation IDs, tenant context, trace propagation, and per-request metadata in hexcrawler services.
 
 ## Why AsyncLocalStorage
 
@@ -83,7 +83,7 @@ export { requestContext };
 // apps/api-gateway/src/plugins/request-context.plugin.ts
 import { FastifyPluginAsync } from 'fastify';
 import { randomUUID } from 'node:crypto';
-import { requestContext } from '@ipf/core/request-context';
+import { requestContext } from '@hexcrawler/core/request-context';
 
 const requestContextPlugin: FastifyPluginAsync = async (fastify) => {
   fastify.addHook('onRequest', (request, _reply, done) => {
@@ -109,7 +109,7 @@ export default requestContextPlugin;
 ```typescript
 // packages/observability/src/request-logger.ts
 import { pino } from 'pino';
-import { getRequestContext } from '@ipf/core/request-context';
+import { getRequestContext } from '@hexcrawler/core/request-context';
 
 export function getRequestLogger(): pino.Logger {
   const ctx = getRequestContext();
@@ -139,7 +139,7 @@ OpenTelemetry's Node.js SDK automatically uses `AsyncLocalStorage` via `@opentel
 
 ```typescript
 // Use requestContext.run() in tests to simulate request scope
-import { requestContext } from '@ipf/core/request-context';
+import { requestContext } from '@hexcrawler/core/request-context';
 
 it('should access correlation ID in request scope', () => {
   const store = {
@@ -163,7 +163,7 @@ For background workers, create the ALS store in the job processor:
 
 ```typescript
 // apps/api-gateway/src/processors/crawl.processor.ts
-import { requestContext } from '@ipf/core/request-context';
+import { requestContext } from '@hexcrawler/core/request-context';
 
 async function processCrawlJob(job: Job<CrawlJobData>): Promise<void> {
   const store: RequestStore = {
@@ -192,4 +192,4 @@ async function processCrawlJob(job: Job<CrawlJobData>): Promise<void> {
 
 ---
 
-> **Provenance**: Created 2026-03-25. Documents the AsyncLocalStorage pattern for request-scoped context propagation across IPF services. Referenced by ADR-006, ADR-011, ADR-015, and the `.github/copilot-instructions.md` Context Management section.
+> **Provenance**: Created 2026-03-25. Documents the AsyncLocalStorage pattern for request-scoped context propagation across hexcrawler services. Referenced by ADR-006, ADR-011, ADR-015, and the `.github/copilot-instructions.md` Context Management section.

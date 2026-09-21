@@ -2,11 +2,11 @@
 // Implements: T-CRAWL-012, REQ-CRAWL-005, REQ-CRAWL-006
 
 import { ok, err } from 'neverthrow';
-import type { Fetcher, FetchConfig } from '@ipf/core/contracts/fetcher';
-import type { Frontier } from '@ipf/core/contracts/frontier';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { Fetcher, FetchConfig } from '@hexcrawler/core/contracts/fetcher';
+import type { Frontier } from '@hexcrawler/core/contracts/frontier';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import type {
   CrawlFrontierEntry,
   CrawlResult,

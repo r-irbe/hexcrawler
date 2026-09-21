@@ -255,7 +255,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret \
   -o jsonpath='{.data.password}' | base64 -d
 ```
 
-The Application CRD (`infra/k8s/argocd/ipf-application.yml`) syncs from `infra/k8s/overlays/dev` with auto-heal and retry. During chaos tests, auto-sync is paused to prevent interference.
+The Application CRD (`infra/k8s/argocd/hexcrawler-application.yml`) syncs from `infra/k8s/overlays/dev` with auto-heal and retry. During chaos tests, auto-sync is paused to prevent interference.
 
 ## Running Everything Together
 
@@ -278,8 +278,8 @@ The E2E test verifies 25+ assertions in 5 phases: simulator endpoints, monitorin
 
 ```bash
 # Port-forward to access dashboards during tests
-kubectl port-forward -n ipf svc/grafana 3000:3000 &
-kubectl port-forward -n ipf svc/jaeger 16686:16686 &
+kubectl port-forward -n hexcrawler svc/grafana 3000:3000 &
+kubectl port-forward -n hexcrawler svc/jaeger 16686:16686 &
 
 # Run full chaos sequence (25 min) with Grafana dashboard open
 scripts/run-chaos-test.sh

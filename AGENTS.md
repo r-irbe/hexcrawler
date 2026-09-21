@@ -1,11 +1,11 @@
-# AGENTS.md — AI Coding Agent Instructions for IPF Crawler
+# AGENTS.md — AI Coding Agent Instructions for hexcrawler
 
 > **Canonical source of truth** for all AI coding agents (GitHub Copilot, Claude Code, Cursor, Windsurf, etc.).
 > Tool-specific files (`CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/rules/`) extend this with tool-specific capabilities.
 
 ## Project Overview
 
-IPF is a highly parallelized distributed web crawler built with TypeScript/Node.js, deployed on Kubernetes. Monorepo: Turborepo + pnpm.
+hexcrawler is a highly parallelized distributed web crawler built with TypeScript/Node.js, deployed on Kubernetes. Monorepo: Turborepo + pnpm.
 
 ## Boundaries
 

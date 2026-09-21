@@ -7,7 +7,7 @@
 
 ## What Changed
 
-Created the first `apps/` service — `apps/api-gateway/` — wiring the tRPC router from `@ipf/api-router` into a Fastify v5 HTTP server.
+Created the first `apps/` service — `apps/api-gateway/` — wiring the tRPC router from `@hexcrawler/api-router` into a Fastify v5 HTTP server.
 
 ### Files Created
 
@@ -55,7 +55,7 @@ Created the first `apps/` service — `apps/api-gateway/` — wiring the tRPC ro
 
 ## Deferred
 
-- OTel first import (MUST #9) — deferred until `@ipf/observability` SDK init is wired
+- OTel first import (MUST #9) — deferred until `@hexcrawler/observability` SDK init is wired
 - Real auth replacing `x-user-id` header placeholder
 
 ## Learnings

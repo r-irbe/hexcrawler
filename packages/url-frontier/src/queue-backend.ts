@@ -1,8 +1,8 @@
 // QueueBackend — port interface for hexagonal architecture
 // Implements: T-DIST-007, ADR-015 (hexagonal, dependency inversion)
 
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
 
 /** A single job to be added to the queue. */
 export type JobSpec = {

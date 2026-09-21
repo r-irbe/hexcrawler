@@ -14,15 +14,15 @@ graph TD
         K6["k6 Load Scripts"]
     end
 
-    subgraph k3d["k3d Cluster: ipf-local"]
-        subgraph NS["namespace: ipf"]
+    subgraph k3d["k3d Cluster: hexcrawler-local"]
+        subgraph NS["namespace: hexcrawler"]
             W1["Pod: crawler-worker-1"]
             W2["Pod: crawler-worker-2"]
             W3["Pod: crawler-worker-N"]
             DRAGON["Pod: dragonfly"]
             HPA["HPA: crawler-worker"]
         end
-        subgraph TEST["namespace: ipf-test"]
+        subgraph TEST["namespace: hexcrawler-test"]
             SIM["Pod: web-simulator"]
         end
     end
@@ -99,7 +99,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: partition-worker-redis
-  namespace: ipf
+  namespace: hexcrawler
 spec:
   podSelector:
     matchLabels:
@@ -192,7 +192,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: crawler-worker
-  namespace: ipf
+  namespace: hexcrawler
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

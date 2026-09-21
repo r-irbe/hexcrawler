@@ -33,7 +33,7 @@ graph TB
 ```typescript
 // packages/api-router/src/router.ts
 import { router, publicProcedure, protectedProcedure } from './trpc';
-import { CrawlSubmitSchema, CrawlStatusSchema } from '@ipf/validation';
+import { CrawlSubmitSchema, CrawlStatusSchema } from '@hexcrawler/validation';
 
 export const appRouter = router({
   crawl: router({

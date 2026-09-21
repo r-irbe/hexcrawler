@@ -1,7 +1,7 @@
 // Error Classifier — map raw exceptions to FetchError discriminated union
 // Implements: T-FETCH-016, REQ-FETCH-018
 
-import type { FetchError } from '@ipf/core/errors/fetch-error';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
 import {
   createTimeoutError,
   createNetworkError,
@@ -12,7 +12,7 @@ import {
   createDnsResolutionFailedError,
   createSslError,
   createConnectionRefusedError,
-} from '@ipf/core/errors/fetch-error';
+} from '@hexcrawler/core/errors/fetch-error';
 
 // --- Error codes for classification ---
 

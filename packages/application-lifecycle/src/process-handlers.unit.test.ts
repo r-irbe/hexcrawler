@@ -5,7 +5,7 @@
 // Validates REQ-LIFE-017: crawl complete → exit 0
 
 import { describe, it, expect, afterEach } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import {
   registerProcessHandlers,
   handleAbortExit,

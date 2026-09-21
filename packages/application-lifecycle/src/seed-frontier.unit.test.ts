@@ -6,13 +6,13 @@
 import { describe, it, expect } from 'vitest';
 import type { Result } from 'neverthrow';
 import { ok, err } from 'neverthrow';
-import type { Frontier, FrontierEntry, FrontierSize } from '@ipf/core/contracts/frontier';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { UrlError } from '@ipf/core/errors/url-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { Frontier, FrontierEntry, FrontierSize } from '@hexcrawler/core/contracts/frontier';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { UrlError } from '@hexcrawler/core/errors/url-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { seedFrontier, parseSeedUrls } from './seed-frontier.js';
 import type { SeedDeps } from './seed-frontier.js';
 

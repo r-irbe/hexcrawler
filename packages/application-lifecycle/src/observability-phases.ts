@@ -1,8 +1,8 @@
 // Observability startup phase — init logger, tracer, metrics before app wiring
 // Implements: T-LIFE-006, T-LIFE-007, T-LIFE-008, REQ-LIFE-003, REQ-LIFE-004, REQ-LIFE-005
 
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { StartupPhase } from './startup-orchestrator.js';
 
 export type ObservabilityFactory = {

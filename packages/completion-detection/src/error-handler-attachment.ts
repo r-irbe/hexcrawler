@@ -1,7 +1,7 @@
 // Error handler attachment — prevent unhandled-error crashes on event emitters
 // Implements: T-COORD-013, REQ-DIST-022
 
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 /** Any object that supports Node.js EventEmitter-style error handling. */
 export type ErrorEmitter = {

@@ -14,7 +14,7 @@ import { spawn } from 'node:child_process';
 
 const execFileAsync = promisify(execFile);
 
-const NAMESPACE = 'ipf';
+const NAMESPACE = 'hexcrawler';
 const KUBECTL_TIMEOUT = 30_000;
 
 /** Run a kubectl command and return stdout */

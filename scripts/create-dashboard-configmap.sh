@@ -3,7 +3,7 @@
 # Loads JSON dashboard files into a ConfigMap that Grafana mounts
 set -euo pipefail
 
-NAMESPACE="${NAMESPACE:-ipf}"
+NAMESPACE="${NAMESPACE:-hexcrawler}"
 DASHBOARD_DIR="infra/monitoring/dashboards"
 
 if [ ! -d "$DASHBOARD_DIR" ]; then

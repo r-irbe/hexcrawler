@@ -2,9 +2,9 @@
 // Implements: T-DIST-003, T-DIST-007, T-DIST-008, T-DIST-009, T-DIST-010
 
 import { ok, err } from 'neverthrow';
-import type { Frontier, FrontierEntry, FrontierSize } from '@ipf/core/contracts/frontier';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { Frontier, FrontierEntry, FrontierSize } from '@hexcrawler/core/contracts/frontier';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { deriveJobId } from './job-id.js';
 import { depthToPriority } from './priority.js';
 import type { QueueBackend, JobSpec } from './queue-backend.js';

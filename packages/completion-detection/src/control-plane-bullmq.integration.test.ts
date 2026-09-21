@@ -4,10 +4,10 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, Worker, type ConnectionOptions, type Job } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema, QueueConfigSchema } from '@ipf/job-queue/connection-config';
-import { createBullMQQueueAdapter } from '@ipf/job-queue/bullmq-queue-adapter';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema, QueueConfigSchema } from '@hexcrawler/job-queue/connection-config';
+import { createBullMQQueueAdapter } from '@hexcrawler/job-queue/bullmq-queue-adapter';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
 import type { QueueAdapter } from './control-plane-adapter.js';
 
 let redis: ManagedRedisContainer;

@@ -5,7 +5,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { UtilizationTracker } from './utilization-tracker.js';
 import { WorkerMetricsReporter } from './worker-metrics.js';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 
 function createMockMetrics(): CrawlMetrics {
   return {

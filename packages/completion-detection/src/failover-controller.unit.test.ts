@@ -5,8 +5,8 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ok, err } from 'neverthrow';
 import { createFailoverController } from './failover-controller.js';
 import type { LeaderElection } from './leader-election.js';
-import type { Logger } from '@ipf/core/contracts/logger';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 
 const noop = (): void => { /* no-op */ };
 

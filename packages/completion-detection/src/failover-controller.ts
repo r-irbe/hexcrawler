@@ -2,7 +2,7 @@
 // Implements: T-COORD-016, REQ-DIST-024, REQ-DIST-025
 
 import type { LeaderElection } from './leader-election.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export type FailoverConfig = {
   readonly pollIntervalMs: number;

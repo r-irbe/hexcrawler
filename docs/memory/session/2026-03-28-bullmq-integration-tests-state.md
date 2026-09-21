@@ -12,7 +12,7 @@
 
 ## Decisions
 
-1. **Circular dep fix**: Moved type declarations to local in `@ipf/job-queue` using structural typing. Removed `@ipf/url-frontier` and `@ipf/completion-detection` from job-queue's deps entirely.
+1. **Circular dep fix**: Moved type declarations to local in `@hexcrawler/job-queue` using structural typing. Removed `@hexcrawler/url-frontier` and `@hexcrawler/completion-detection` from job-queue's deps entirely.
 2. **BullMQ stalled-check key**: The `stalled-check` key in Redis uses `stalledInterval` as TTL. Workers sharing a queue must use compatible `stalledInterval` values.
 3. **Stalled test approach**: Use `worker.disconnect()` (not `close(true)`) to simulate crash — leaves job orphaned without cleanup.
 4. **T-OBS-029**: Already implemented in `trace-propagation.ts` — no new test needed.

@@ -4,9 +4,9 @@
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
 import { seedFrontier } from './seed-frontier.js';
-import type { Frontier, FrontierEntry } from '@ipf/core/contracts/frontier';
-import type { Logger } from '@ipf/core/contracts/logger';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { Frontier, FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 
 function stubFrontier(enqueueResult: number = 0): Frontier & { enqueueCalls: FrontierEntry[][] } {
   const enqueueCalls: FrontierEntry[][] = [];

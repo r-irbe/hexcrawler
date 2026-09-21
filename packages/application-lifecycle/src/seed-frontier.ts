@@ -2,11 +2,11 @@
 // Implements: T-LIFE-010 to 013, REQ-LIFE-007 to 010
 
 import type { Result } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import type { Frontier, FrontierEntry } from '@ipf/core/contracts/frontier';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { UrlError } from '@ipf/core/errors/url-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import type { Frontier, FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { UrlError } from '@hexcrawler/core/errors/url-error';
 
 export type ParseCrawlUrlFn = (raw: string) => Result<CrawlUrl, UrlError>;
 

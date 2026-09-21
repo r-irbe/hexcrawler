@@ -1,8 +1,8 @@
 // Fetcher holder — create once, reuse across all jobs
 // Implements: T-LIFE-031, REQ-LIFE-028
 
-import type { Fetcher } from '@ipf/core/contracts/fetcher';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Fetcher } from '@hexcrawler/core/contracts/fetcher';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { StartupPhase } from './startup-orchestrator.js';
 
 export type FetcherFactory = () => Fetcher & Disposable;

@@ -2,10 +2,10 @@
 // Implements: T-COORD-014 to 018, REQ-DIST-023 to 027
 
 import { ok, err } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 
 export type LeaderElectionConfig = {
   readonly coordinatorId: string;

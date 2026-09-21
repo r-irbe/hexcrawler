@@ -1,7 +1,7 @@
 // WorkerMetricsReporter — periodic metrics push and counter consistency guard
 // Implements: T-WORK-012 (counter guard), T-WORK-013 (metrics), REQ-DIST-013, REQ-DIST-014
 
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 import type { UtilizationTracker } from './utilization-tracker.js';
 
 export type ActiveJobCountProvider = {

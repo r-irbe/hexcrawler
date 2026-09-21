@@ -1,1 +1,1 @@
-export { default } from '@ipf/eslint-config';
+export { default } from '@hexcrawler/eslint-config';

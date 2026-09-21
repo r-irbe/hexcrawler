@@ -8,7 +8,7 @@
 
 ## Summary
 
-Created a comprehensive event-driven automation framework for the IPF distributed crawler project. Identified 134 automation opportunities across 13 domains and implemented 7 automated pipelines, a trigger catalog, metrics/SLOs, and 4 new automation skills.
+Created a comprehensive event-driven automation framework for the hexcrawler project. Identified 134 automation opportunities across 13 domains and implemented 7 automated pipelines, a trigger catalog, metrics/SLOs, and 4 new automation skills.
 
 ## Work Completed
 

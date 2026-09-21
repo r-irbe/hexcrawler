@@ -2,7 +2,7 @@
 // Validates REQ-COMM-019: Redis Pub/Sub for ephemeral notifications (RALPH-013)
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Redis } from 'ioredis';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createPubSubPublisher, createPubSubSubscriber } from './pubsub.js';
 
 function makeRedis(container: ManagedRedisContainer): Redis {

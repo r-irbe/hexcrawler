@@ -3,11 +3,11 @@
 
 import { describe, it, expect } from 'vitest';
 import { createFetcherPhase } from './fetcher-holder.js';
-import type { Fetcher, FetchConfig, FetchResult } from '@ipf/core/contracts/fetcher';
-import type { Disposable } from '@ipf/core/contracts/disposable';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { FetchError } from '@ipf/core/errors/fetch-error';
+import type { Fetcher, FetchConfig, FetchResult } from '@hexcrawler/core/contracts/fetcher';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
 import { ok } from 'neverthrow';
 
 function stubFetcher(): Fetcher & Disposable {

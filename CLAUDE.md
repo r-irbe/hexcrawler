@@ -1,4 +1,4 @@
-# CLAUDE.md — Claude Code Extensions for IPF Crawler
+# CLAUDE.md — Claude Code Extensions for hexcrawler
 
 > Extends [AGENTS.md](AGENTS.md) (binding). This file adds **only** Claude Code-specific rules.
 

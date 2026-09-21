@@ -1,10 +1,10 @@
-# IPF Crawler — Prometheus Alert Rules
+# hexcrawler — Prometheus Alert Rules
 # Implements: REQ-ALERT-001 through REQ-ALERT-012, REQ-ALERT-017 (annotations)
 # Design: docs/specs/alerting/design.md
 # Metric source: packages/observability/src/prom-metrics.ts
 
 groups:
-  - name: ipf-crawler-alerts
+  - name: hexcrawler-alerts
     rules:
       # REQ-ALERT-001: High error rate alert (T-ALERT-001)
       - alert: HighErrorRate
@@ -22,7 +22,7 @@ groups:
           description: >-
             Error rate is {{ $value | humanizePercentage }} over the last 2
             minutes. Threshold: 50%. Minimum throughput guard: 0.1 req/s.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-error-rate"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-error-rate"
 
       # REQ-ALERT-002: Zero fetch rate alert (T-ALERT-002)
       - alert: ZeroFetchRate
@@ -37,7 +37,7 @@ groups:
           description: >-
             No successful fetches in the last 5 minutes while frontier
             contains {{ $value }} URLs. System may be deadlocked.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#zero-fetch-rate"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#zero-fetch-rate"
 
       # REQ-ALERT-003: Stalled jobs alert (T-ALERT-003)
       - alert: StalledJobs
@@ -50,7 +50,7 @@ groups:
           description: >-
             Stalled job rate is {{ $value | humanize }}/s over the last 2
             minutes. Threshold: 0.05/s (~6 stalls per 2 min).
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#stalled-jobs"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#stalled-jobs"
 
       # REQ-ALERT-004: P95 latency alert (T-ALERT-004)
       - alert: P95LatencyHigh
@@ -63,7 +63,7 @@ groups:
           description: >-
             P95 fetch latency is {{ $value | humanizeDuration }} over the
             last 3 minutes. Threshold: 10s (matches FETCH_TIMEOUT_MS).
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-latency"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-latency"
 
       # REQ-ALERT-005: P99 latency critical alert (T-ALERT-005)
       - alert: P99LatencyCritical
@@ -77,7 +77,7 @@ groups:
             P99 fetch latency is {{ $value | humanizeDuration }} over the
             last 5 minutes. Threshold: 15s (1.5x FETCH_TIMEOUT_MS).
             Indicates systemic degradation.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-latency"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-latency"
 
       # REQ-ALERT-006: Frontier capacity alert (T-ALERT-006)
       - alert: FrontierCapacity
@@ -90,7 +90,7 @@ groups:
           description: >-
             Frontier contains {{ $value }} URLs, exceeding the 5000
             threshold for 5 minutes. This is 50% of the retention window.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#frontier-capacity"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#frontier-capacity"
 
       # REQ-ALERT-007: Frontier growth rate alert (T-ALERT-007)
       - alert: FrontierGrowth
@@ -103,7 +103,7 @@ groups:
           description: >-
             Frontier is growing at {{ $value | humanize }} URLs/min over the
             last 3 minutes. Threshold: 100 URLs/min (10x normal discovery rate).
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#frontier-capacity"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#frontier-capacity"
 
       # REQ-ALERT-008: High utilization alert (T-ALERT-008)
       - alert: HighUtilization
@@ -116,7 +116,7 @@ groups:
           description: >-
             Average worker utilization is {{ $value | humanizePercentage }}
             over the last 3 minutes. Threshold: 80%. Consider scaling up workers.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#worker-utilization"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#worker-utilization"
 
       # REQ-ALERT-009: Low utilization alert (T-ALERT-009)
       - alert: LowUtilization
@@ -129,7 +129,7 @@ groups:
           description: >-
             Average worker utilization is {{ $value | humanizePercentage }}
             for 10 minutes. Threshold: below 20%. Consider scaling down.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#worker-utilization"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#worker-utilization"
 
       # REQ-ALERT-010: Worker down alert (T-ALERT-010)
       - alert: WorkerDown
@@ -142,7 +142,7 @@ groups:
           description: >-
             Worker instance {{ $labels.instance }} has been unreachable
             for 1 minute. Grace period for transient network issues exceeded.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#worker-down"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#worker-down"
 
       # REQ-ALERT-011: Coordinator restart alert (T-ALERT-011)
       - alert: CoordinatorRestart
@@ -155,7 +155,7 @@ groups:
           description: >-
             Coordinator restart detected ({{ $value }} restart(s) in the
             last minute). State continuity may be at risk if HA is not active.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#coordinator-restart"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#coordinator-restart"
 
       # REQ-ALERT-012: Zero discovery alert (T-ALERT-012)
       - alert: ZeroDiscovery
@@ -172,4 +172,4 @@ groups:
             Zero URLs discovered in the last 10 minutes despite successful
             fetches and a frontier of {{ with query "frontier_size" }}{{ . | first | value }}{{ end }}
             URLs. Crawl may have reached a dead end.
-          runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#zero-discovery"
+          runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#zero-discovery"

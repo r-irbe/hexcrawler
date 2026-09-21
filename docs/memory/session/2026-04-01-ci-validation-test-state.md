@@ -26,5 +26,5 @@
 | Last completed gate | G4 |
 | Guard function status | `pending` |
 | Commits on branch | 0 |
-| Tests passing | 65/65 (@ipf/core) |
+| Tests passing | 65/65 (@hexcrawler/core) |
 | Blockers | none |

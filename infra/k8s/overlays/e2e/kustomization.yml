@@ -22,7 +22,7 @@ patches:
         value: 1
       - op: replace
         path: /spec/template/spec/containers/0/image
-        value: k3d-ipf-registry.localhost:5111/ipf-crawler:latest
+        value: k3d-hexcrawler-registry.localhost:5111/hexcrawler:latest
       - op: replace
         path: /spec/template/spec/containers/0/resources/requests/cpu
         value: 100m

@@ -109,15 +109,15 @@ infrastructure/
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ipf-crawler
+  name: hexcrawler
 spec:
   source:
-    repoURL: https://github.com/org/ipf_clean
+    repoURL: https://github.com/r-irbe/hexcrawler
     path: infrastructure/k8s/overlays/production
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: ipf
+    namespace: hexcrawler
   syncPolicy:
     automated:
       prune: true

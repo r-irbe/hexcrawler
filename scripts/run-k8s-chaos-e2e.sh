@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=lib/e2e-helpers.sh
 source "$SCRIPT_DIR/lib/e2e-helpers.sh"
 
-NAMESPACE="${NAMESPACE:-ipf}"
+NAMESPACE="${NAMESPACE:-hexcrawler}"
 CHAOS_DIR="${CHAOS_DIR:-infra/k8s/chaos}"
 RESULTS_DIR="${RESULTS_DIR:-/tmp/k8s-e2e-results}"
 mkdir -p "$RESULTS_DIR"
@@ -32,7 +32,7 @@ log "=== Scaling: Scale Up ==="
 # F-004: Pre-condition — skip scaling if crawler-worker not deployed
 if ! kubectl get deployment crawler-worker -n "$NAMESPACE" &>/dev/null; then
   log "SKIP: crawler-worker not deployed — scaling tests require crawler image build"
-  log "  Build with: docker build -t <registry>/ipf-crawler:latest -f infra/docker/Dockerfile ."
+  log "  Build with: docker build -t <registry>/hexcrawler:latest -f infra/docker/Dockerfile ."
   INITIAL_REPLICAS=0
 else
   INITIAL_REPLICAS=$(get_replicas)

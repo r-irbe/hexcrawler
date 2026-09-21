@@ -155,4 +155,4 @@ Zero mock infrastructure. Integration tests use real containers (Testcontainers)
 | Release | Push to main | Multi-arch Docker build, Trivy scan, ghcr.io publish |
 | Version Packages | Push to main | Changesets version PR |
 
-Container images published to `ghcr.io/r-irbe/octupus-crawler/crawler:{latest,sha-<commit>}`. Kustomize overlays auto-update, triggering ArgoCD sync.
+Container images published to `ghcr.io/r-irbe/hexcrawler/crawler:{latest,sha-<commit>}`. Kustomize overlays auto-update, triggering ArgoCD sync.

@@ -121,7 +121,7 @@ sequenceDiagram
 - Job queue instrumentation (BullMQ) for cross-job propagation → REQ-OBS-024, REQ-OBS-029
 - In-memory exporter for tests → REQ-OBS-025
 - Non-throwing shutdown → REQ-OBS-026
-- **G8 Finding F-015**: Tracer name in `extractAndStartSpan` is parameterised (default `'ipf-observability'`), not hardcoded
+- **G8 Finding F-015**: Tracer name in `extractAndStartSpan` is parameterised (default `'hexcrawler-observability'`), not hardcoded
 - **G8 Finding F-017**: Default sampling rate is 10% — tests verifying span capture must pass `samplingRate: 1.0`
 
 ### Trace Sampling Strategy (REQ-OBS-027)

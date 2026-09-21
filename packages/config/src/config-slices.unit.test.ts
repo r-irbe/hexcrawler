@@ -58,7 +58,7 @@ describe('config slices', () => {
     if (result.isOk()) {
       const crawler: CrawlerConfig = result.value;
       expect(crawler.CRAWL_MAX_DEPTH).toBe(3);
-      expect(crawler.CRAWL_USER_AGENT).toContain('IPF');
+      expect(crawler.CRAWL_USER_AGENT).toContain('hexcrawler');
     }
   });
 });
@@ -83,7 +83,7 @@ describe('lifecycle config slices', () => {
       expect(fetch.CRAWL_MAX_REDIRECTS).toBe(5);
       expect(fetch.CRAWL_MAX_RESPONSE_BYTES).toBe(10_485_760);
       expect(fetch.CRAWL_MAX_RETRIES).toBe(3);
-      expect(fetch.CRAWL_USER_AGENT).toContain('IPF');
+      expect(fetch.CRAWL_USER_AGENT).toContain('hexcrawler');
       expect(fetch.ALLOW_PRIVATE_IPS).toBe(false);
     }
   });

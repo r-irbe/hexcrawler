@@ -169,9 +169,9 @@
 
 - [x] **T-AGENT-085**: Create `.github/instructions/strict-typescript.instructions.md` with `applyTo: "**/*.ts"` — strict mode reminders, `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`, `noImplicitOverride`, `_tag` discriminated union pattern → REQ-AGENT-089, REQ-AGENT-093
 - [x] **T-AGENT-086**: Add Zod schema-first directive to `.github/instructions/api-layer.instructions.md` — schema must be defined before handler function, code review checklist item → REQ-AGENT-090
-- [x] **T-AGENT-087**: Create ESLint rule `@ipf/no-infra-in-domain` in `packages/eslint-config/` — block `domain/` from importing `infrastructure/` or `infra/` → REQ-AGENT-091 — *implemented via `import-x/no-restricted-paths` zones in eslint.config.js*
-- [x] **T-AGENT-088**: Create ESLint rule `@ipf/no-app-in-infra` in `packages/eslint-config/` — block `infrastructure/` from importing `application/` → REQ-AGENT-091 — *implemented via `import-x/no-restricted-paths` zones in eslint.config.js*
-- [x] **T-AGENT-089**: Create ESLint rule `@ipf/otel-first-import` in `packages/eslint-config/` — verify first import in `apps/*/src/main.ts` is `'./otel'` → REQ-AGENT-092 — *custom rule in eslint-config/rules/otel-first-import.js, wired into eslint.config.js for apps/*/src/main.ts*
+- [x] **T-AGENT-087**: Create ESLint rule `@hexcrawler/no-infra-in-domain` in `packages/eslint-config/` — block `domain/` from importing `infrastructure/` or `infra/` → REQ-AGENT-091 — *implemented via `import-x/no-restricted-paths` zones in eslint.config.js*
+- [x] **T-AGENT-088**: Create ESLint rule `@hexcrawler/no-app-in-infra` in `packages/eslint-config/` — block `infrastructure/` from importing `application/` → REQ-AGENT-091 — *implemented via `import-x/no-restricted-paths` zones in eslint.config.js*
+- [x] **T-AGENT-089**: Create ESLint rule `@hexcrawler/otel-first-import` in `packages/eslint-config/` — verify first import in `apps/*/src/main.ts` is `'./otel'` → REQ-AGENT-092 — *custom rule in eslint-config/rules/otel-first-import.js, wired into eslint.config.js for apps/*/src/main.ts*
 - [x] **T-AGENT-090**: Verify `@typescript-eslint/no-explicit-any` is configured as error (not warning) across all packages in `packages/eslint-config/` → REQ-AGENT-094 — *verified: eslint.config.js has `'@typescript-eslint/no-explicit-any': 'error'`*
 
 ## Phase 21: API Contract & Resilience Enforcement

@@ -6,7 +6,7 @@ import { S3Client, CreateBucketCommand } from '@aws-sdk/client-s3';
 import {
   startMinioContainer,
   type ManagedMinioContainer,
-} from '@ipf/testing/containers/minio';
+} from '@hexcrawler/testing/containers/minio';
 import { createS3PageContentRepository } from './repositories/s3-page-content-repository.js';
 import type { FetchMetadata, PageKey } from './types.js';
 

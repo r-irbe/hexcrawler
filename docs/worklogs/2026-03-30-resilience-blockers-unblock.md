@@ -29,7 +29,7 @@ Unblocked 5 resilience tasks that were waiting on Redis and BullMQ infrastructur
 
 ## Files Modified
 
-- `packages/resilience/package.json` — added `ioredis`, `neverthrow` deps; `@ipf/testing` devDep; export
+- `packages/resilience/package.json` — added `ioredis`, `neverthrow` deps; `@hexcrawler/testing` devDep; export
 - `packages/job-queue/package.json` — added `./dlq-handler` export
 
 ## Decisions
@@ -62,5 +62,5 @@ Unblocked 5 resilience tasks that were waiting on Redis and BullMQ infrastructur
 ## Learnings
 
 - `import IoRedis from 'ioredis'` → not constructable with `verbatimModuleSyntax: true`. Use `import { Redis } from 'ioredis'` instead.
-- `@ipf/testing` exports use `./containers/redis` not `./containers/redis-container`
+- `@hexcrawler/testing` exports use `./containers/redis` not `./containers/redis-container`
 - `vi.fn(() => ...)` arrow functions can't be used as constructors. Use `vi.fn(function() { ... })` for mocked classes.

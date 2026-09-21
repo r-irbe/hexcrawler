@@ -1,7 +1,7 @@
 // Backoff controller — exponential backoff with skip ticks and abort threshold
 // Implements: T-COORD-006, T-COORD-007, REQ-DIST-015
 
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export type BackoffConfig = {
   readonly maxConsecutiveFailures: number;

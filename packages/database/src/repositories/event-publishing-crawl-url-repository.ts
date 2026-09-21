@@ -7,7 +7,7 @@ import type { DataError } from '../errors.js';
 import type { CrawlURLStatus, FetchResult } from '../types.js';
 import type { CrawlURLRepository } from './crawl-url-repository.js';
 
-// --- Minimal event port (structural, avoids coupling to @ipf/redis) ---
+// --- Minimal event port (structural, avoids coupling to @hexcrawler/redis) ---
 
 export type StatusChangeEvent = {
   readonly type: string;

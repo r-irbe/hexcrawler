@@ -94,7 +94,7 @@
 
 - [x] Add ArgoCD namespace + manifest install to `scripts/setup-local.sh`
 - [x] Wait for ArgoCD server readiness
-- [x] Create ArgoCD Application CRD (`infra/k8s/argocd/ipf-application.yml`)
+- [x] Create ArgoCD Application CRD (`infra/k8s/argocd/hexcrawler-application.yml`)
 - Validates: REQ-LTO-020
 
 ### T-LTO-013: ArgoCD Grafana Integration

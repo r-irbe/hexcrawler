@@ -1,4 +1,4 @@
-# IPF Crawler — Multi-Stage Dockerfile
+# hexcrawler — Multi-Stage Dockerfile
 # Implements: REQ-INFRA-001 (multi-stage, minimal image)
 #             REQ-INFRA-002 (non-root user)
 # Design: docs/specs/infrastructure/design.md §1

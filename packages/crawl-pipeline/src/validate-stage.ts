@@ -6,7 +6,7 @@ import {
   createDepthExceededError,
   createDomainNotAllowedError,
   type CrawlError,
-} from '@ipf/core/errors/crawl-error';
+} from '@hexcrawler/core/errors/crawl-error';
 import type { CrawlFrontierEntry, ValidateConfig } from './crawl-types.js';
 
 /**

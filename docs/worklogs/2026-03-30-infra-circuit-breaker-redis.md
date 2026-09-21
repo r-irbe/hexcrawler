@@ -15,12 +15,12 @@ Implemented 6 infrastructure tasks unblocked by prior integration of Redis, Bull
 
 | Task | Package | Files | Tests |
 | --- | --- | --- | --- |
-| T-RES-018: Redis circuit breaker | `@ipf/redis` | circuit-breaker.ts | 10 unit |
-| T-RES-019: Database CB wiring | `@ipf/database` | resilient-crawl-url-repository.ts | 6 unit |
-| T-COMM-021: Idempotency store | `@ipf/redis` | idempotency-store.ts | 7 unit + 4 integration |
-| T-COMM-022: Redis Pub/Sub | `@ipf/redis` | pubsub.ts | 7 unit + 3 integration |
-| T-COMM-024: Streams integration test | `@ipf/redis` | streams.integration.test.ts | 4 integration |
-| T-COMM-025: Idempotency integration test | `@ipf/redis` | idempotency-store.integration.test.ts | 4 integration |
+| T-RES-018: Redis circuit breaker | `@hexcrawler/redis` | circuit-breaker.ts | 10 unit |
+| T-RES-019: Database CB wiring | `@hexcrawler/database` | resilient-crawl-url-repository.ts | 6 unit |
+| T-COMM-021: Idempotency store | `@hexcrawler/redis` | idempotency-store.ts | 7 unit + 4 integration |
+| T-COMM-022: Redis Pub/Sub | `@hexcrawler/redis` | pubsub.ts | 7 unit + 3 integration |
+| T-COMM-024: Streams integration test | `@hexcrawler/redis` | streams.integration.test.ts | 4 integration |
+| T-COMM-025: Idempotency integration test | `@hexcrawler/redis` | idempotency-store.integration.test.ts | 4 integration |
 
 ## Files Created/Modified
 

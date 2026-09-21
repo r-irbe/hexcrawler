@@ -9,7 +9,7 @@
 
 ## Context
 
-The IPF crawler has multiple communication patterns: internal TypeScript service-to-service calls within the monorepo, a public API for external consumers, high-throughput inter-service messaging, asynchronous background job processing, and long-running multi-step workflows (crawl → parse → store → index). Each pattern has different requirements for type safety, throughput, durability, and observability.
+The hexcrawler has multiple communication patterns: internal TypeScript service-to-service calls within the monorepo, a public API for external consumers, high-throughput inter-service messaging, asynchronous background job processing, and long-running multi-step workflows (crawl → parse → store → index). Each pattern has different requirements for type safety, throughput, durability, and observability.
 
 The existing ADRs cover BullMQ for job queues (ADR-002) and Fastify for HTTP (ADR-011), but do not address internal typed RPC, contract-first public API design, gRPC for high-throughput paths, or durable workflow orchestration for complex multi-step operations.
 
@@ -56,7 +56,7 @@ export type AppRouter = typeof appRouter;
 For APIs consumed by external clients or non-TypeScript services, use **TypeSpec** (Microsoft's open-source API description language) to define contracts that compile to OpenAPI 3.1, JSON Schema, and client code:
 
 ```typespec
-@service({ title: "IPF Crawler API", version: "1.0.0" })
+@service({ title: "hexcrawler API", version: "1.0.0" })
 namespace CrawlerAPI;
 
 model CrawlRequest {

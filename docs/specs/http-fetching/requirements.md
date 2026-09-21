@@ -19,9 +19,9 @@ The HTTP client shall be injectable/replaceable for deterministic testing.
 ### Acceptance Criteria — HTTP Client
 
 ```gherkin
-Given a configured User-Agent string "IPF-Crawler/1.0"
+Given a configured User-Agent string "hexcrawler/1.0"
 When an HTTP request is made
-Then the User-Agent header is "IPF-Crawler/1.0"
+Then the User-Agent header is "hexcrawler/1.0"
 
 Given a test environment
 When the fetcher is instantiated

@@ -1,10 +1,10 @@
 // Completion detector — poll loop, completion check, empty-queue guard, restart detection
 // Implements: T-COORD-001 to 005, REQ-DIST-012 to 014, REQ-DIST-016
 
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
 import type { BackoffController } from './backoff-controller.js';
 
 export type QueueCounts = {

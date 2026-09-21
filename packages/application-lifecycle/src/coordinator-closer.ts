@@ -1,8 +1,8 @@
 // Coordinator closer — clear interval and settle pending promise on shutdown
 // Implements: T-LIFE-026, T-LIFE-027, REQ-LIFE-023, REQ-LIFE-024
 
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 
 /**
  * A coordinator that can be stopped and has an optional pending promise.

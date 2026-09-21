@@ -4,8 +4,8 @@
 import { describe, it, expect } from 'vitest';
 import { createObservabilityPhases } from './observability-phases.js';
 import type { ObservabilityFactory, ObservabilityConfig } from './observability-phases.js';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 
 const noop = (): void => { /* no-op */ };
 

@@ -3,7 +3,7 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import type { FastifyInstance } from 'fastify';
 import { createServer } from './server.js';
-import type { CrawlService } from '@ipf/api-router/trpc';
+import type { CrawlService } from '@hexcrawler/api-router/trpc';
 
 const stubCrawlService: CrawlService = {
   submit: (input) => Promise.resolve({

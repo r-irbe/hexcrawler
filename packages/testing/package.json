@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/testing",
+  "name": "@hexcrawler/testing",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -27,7 +27,7 @@
     "testcontainers": "^11.14.0"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
     "@types/node": "^25.6.0",
     "eslint": "^10.2.0",
     "redis": "^5.12.1",

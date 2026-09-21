@@ -6,7 +6,7 @@
 
 ## Summary
 
-Established the complete documentation framework and architectural decision records for the IPF distributed web crawler project. This session created the foundational governance documents that will guide all future development.
+Established the complete documentation framework and architectural decision records for the hexcrawler project. This session created the foundational governance documents that will guide all future development.
 
 ## Work Completed
 

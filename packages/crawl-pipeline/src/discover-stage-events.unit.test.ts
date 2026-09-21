@@ -3,8 +3,8 @@
 
 import { describe, it, expect, vi } from 'vitest';
 import { ok, err } from 'neverthrow';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { Logger } from '@ipf/core/contracts/logger';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import {
   discoverLinksWithEvents,
   type DiscoveryEventPublisher,

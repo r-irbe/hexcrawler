@@ -24,7 +24,7 @@
 | `WORKER_ID` | string | — | Unique worker identifier |
 | `REDIS_MAX_RETRIES` | number | `3` | Max Redis connection retries |
 | `DATABASE_POOL_SIZE` | number | `20` | PostgreSQL connection pool size |
-| `S3_BUCKET` | string | `ipf-crawl-pages` | S3 bucket name |
+| `S3_BUCKET` | string | `hexcrawler-crawl-pages` | S3 bucket name |
 | `CRAWL_MAX_DEPTH` | number | `3` | Maximum crawl depth from seeds |
 | `CRAWL_MAX_CONCURRENT_FETCHES` | number | `10` | Parallel fetch limit |
 | `CRAWL_FETCH_TIMEOUT_MS` | number | `30000` | HTTP fetch timeout (ms) |
@@ -34,7 +34,7 @@
 | `CRAWL_MAX_RETRIES` | number | `3` | Fetch retry limit |
 | `CRAWL_MAX_REDIRECTS` | number | `5` | Max HTTP redirects |
 | `CRAWL_MAX_RESPONSE_BYTES` | number | `10485760` | Max response body (10MB) |
-| `CRAWL_USER_AGENT` | string | `IPF-Crawler/1.0` | HTTP User-Agent header |
+| `CRAWL_USER_AGENT` | string | `hexcrawler/1.0` | HTTP User-Agent header |
 | `ALLOW_PRIVATE_IPS` | boolean | `false` | Allow fetching private IPs (dev only) |
 | `ALLOWED_DOMAINS` | CSV string | — | Restrict crawl to listed domains |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | URL | `http://otel-collector:4318` | OTel collector endpoint |

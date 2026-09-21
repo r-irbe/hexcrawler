@@ -3,9 +3,9 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, type ConnectionOptions } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema } from '@ipf/job-queue/connection-config';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema } from '@hexcrawler/job-queue/connection-config';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
 import { createReadinessCheck } from './readiness-check.js';
 
 let redis: ManagedRedisContainer;

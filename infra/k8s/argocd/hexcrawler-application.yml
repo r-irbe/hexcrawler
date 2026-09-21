@@ -1,22 +1,22 @@
-# ArgoCD Application for IPF Crawler
+# ArgoCD Application for hexcrawler
 # REQ-LTO-020: ArgoCD deployment in k3d
 # REQ-LTO-022: ArgoCD sync during load tests
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ipf-crawler
+  name: hexcrawler
   namespace: argocd
 spec:
   project: default
   source:
     # For local dev, this points to the local git server or filesystem
     # In production, replace with your Git repository URL
-    repoURL: https://github.com/example/ipf-crawler.git
+    repoURL: https://github.com/r-irbe/hexcrawler.git
     targetRevision: HEAD
     path: infra/k8s/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: ipf
+    namespace: hexcrawler
   syncPolicy:
     automated:
       prune: true

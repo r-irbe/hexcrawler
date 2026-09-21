@@ -8,9 +8,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=lib/e2e-helpers.sh
 source "$SCRIPT_DIR/lib/e2e-helpers.sh"
 
-export NAMESPACE="${NAMESPACE:-ipf}"
+export NAMESPACE="${NAMESPACE:-hexcrawler}"
 export RESULTS_DIR="${RESULTS_DIR:-/tmp/k8s-e2e-results}"
-REGISTRY="${REGISTRY:-k3d-ipf-registry.localhost:5111}"
+REGISTRY="${REGISTRY:-k3d-hexcrawler-registry.localhost:5111}"
 SKIP_BUILD="${SKIP_BUILD:-false}"
 SKIP_DEPLOY="${SKIP_DEPLOY:-false}"
 mkdir -p "$RESULTS_DIR"
@@ -29,16 +29,16 @@ log "=== K8s E2E Test Suite ==="
 if [ "$SKIP_BUILD" != "true" ]; then
   log ""
   log "=== Building Mega Simulator Image ==="
-  docker build -t "${REGISTRY}/ipf-mega-simulator:latest" \
+  docker build -t "${REGISTRY}/hexcrawler-mega-simulator:latest" \
     -f infra/docker/Dockerfile.mega-simulator .
-  docker push "${REGISTRY}/ipf-mega-simulator:latest"
+  docker push "${REGISTRY}/hexcrawler-mega-simulator:latest"
   log "Image pushed"
 fi
 
 if [ "$SKIP_DEPLOY" != "true" ]; then
   log ""
   log "=== Deploying to k3d ==="
-  kubectl create namespace ipf --dry-run=client -o yaml | kubectl apply -f -
+  kubectl create namespace hexcrawler --dry-run=client -o yaml | kubectl apply -f -
   bash "$SCRIPT_DIR/create-dashboard-configmap.sh"
   kubectl apply -k infra/k8s/overlays/e2e/
   for deploy in mega-simulator prometheus grafana loki jaeger; do

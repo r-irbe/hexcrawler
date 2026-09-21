@@ -3,9 +3,9 @@
 
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 import { createCompletionDetector } from './completion-detector.js';
 import type { CompletionDetectorDeps, QueueCounts } from './completion-detector.js';
 import type { BackoffController } from './backoff-controller.js';

@@ -12,7 +12,7 @@ import { startTestDatabase, type TestDatabase } from './test-helpers.js';
 import {
   startMinioContainer,
   type ManagedMinioContainer,
-} from '@ipf/testing/containers/minio';
+} from '@hexcrawler/testing/containers/minio';
 import { S3Client, CreateBucketCommand } from '@aws-sdk/client-s3';
 import type { NewCrawlURL, FetchMetadata, PageKey } from './types.js';
 import { createHash } from 'node:crypto';

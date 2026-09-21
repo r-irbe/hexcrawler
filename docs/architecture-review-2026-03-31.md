@@ -1,4 +1,4 @@
-# Deep Architectural Review — IPF Crawler
+# Deep Architectural Review — hexcrawler
 
 > **Date**: 2026-03-31
 > **Scope**: All 18 packages + 1 app (19 workspace members)
@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-The IPF crawler demonstrates **strong architectural discipline** across a well-organized TypeScript monorepo. Strict typing (TS 6.0.2, zero `any`), comprehensive testing (179 tests, 7 property test suites), and systematic spec coverage (22/22 complete) position this codebase well for pre-production readiness. Code quality is high; operational readiness requires additional work before production deployment.
+The hexcrawler demonstrates **strong architectural discipline** across a well-organized TypeScript monorepo. Strict typing (TS 6.0.2, zero `any`), comprehensive testing (179 tests, 7 property test suites), and systematic spec coverage (22/22 complete) position this codebase well for pre-production readiness. Code quality is high; operational readiness requires additional work before production deployment.
 
 **ADR Compliance**: 5/6 audited ADRs fully compliant, 1 partially compliant (ADR-016 coding standards — `kind` vs `_tag`, OTel gap). AGENTS.md MUST rules: 12/14 verified compliant, 2 pending (OTel first import, contract tests). See [appendix](architecture-review-2026-03-31-appendix.md) for full MUST rules audit.
 
@@ -82,7 +82,7 @@ Zero `process.env` access in production code. Zod config-first pattern enforced.
 
 ### 2.2 SSRF Protection — COMPLIANT
 
-`@ipf/ssrf-guard` provides `SsrfValidator`; `@ipf/http-fetching` injects it for per-hop validation in redirect loops. RFC 6890 coverage verified via property tests. OpenAPI.yaml documents validation for crawl endpoints.
+`@hexcrawler/ssrf-guard` provides `SsrfValidator`; `@hexcrawler/http-fetching` injects it for per-hop validation in redirect loops. RFC 6890 coverage verified via property tests. OpenAPI.yaml documents validation for crawl endpoints.
 
 ### 2.3 Secrets Management — COMPLIANT
 
@@ -102,7 +102,7 @@ Zero hardcoded secrets. External Secrets Operator → K8s Secrets → env vars s
 
 ### 3.1 Graceful Shutdown — COMPLIANT
 
-SIGTERM/SIGINT handlers in `apps/api-gateway/src/main.ts`. Full lifecycle orchestration via `@ipf/application-lifecycle`. GracefulShutdown class with unit + integration tests. Typed exit codes per shutdown reason.
+SIGTERM/SIGINT handlers in `apps/api-gateway/src/main.ts`. Full lifecycle orchestration via `@hexcrawler/application-lifecycle`. GracefulShutdown class with unit + integration tests. Typed exit codes per shutdown reason.
 
 ### 3.2 Health Endpoints — COMPLIANT
 

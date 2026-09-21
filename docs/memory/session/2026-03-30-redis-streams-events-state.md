@@ -36,7 +36,7 @@
 
 ## Decisions Log
 
-1. **New @ipf/redis package** — Created standalone package for Redis Streams infrastructure. ioredis for client, neverthrow for Results, zod for config validation.
+1. **New @hexcrawler/redis package** — Created standalone package for Redis Streams infrastructure. ioredis for client, neverthrow for Results, zod for config validation.
 2. **Port pattern** — `EventPublisher` and `EventConsumer` are plain object types (ports), not classes. `createRedisStreamPublisher()` and `createRedisStreamConsumer()` are factory functions (adapters).
 3. **XAUTOCLAIM via redis.call()** — ioredis doesn't have typed XAUTOCLAIM method; used `redis.call()` with manual type assertion.
 4. **T-COMM-013/014 deferred** — Wiring events into pipeline/worker requires cross-package changes (Tier 2). Infrastructure (publisher/consumer) landed first.

@@ -3,8 +3,8 @@
 
 import { describe, it, expect, vi } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 import { createControlPlaneAdapter } from './control-plane-adapter.js';
 import type { QueueAdapter } from './control-plane-adapter.js';
 

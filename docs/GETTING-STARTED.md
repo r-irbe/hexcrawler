@@ -12,7 +12,7 @@ Starts the crawler targeting a 7-page web simulator. Within 30 seconds, Grafana 
 
 | UI | URL | Content |
 | -- | --- | ------- |
-| Grafana | http://localhost:3000 | 7 dashboards — start with "IPF Crawler Overview" |
+| Grafana | http://localhost:3000 | 7 dashboards — start with "hexcrawler Overview" |
 | Jaeger | http://localhost:16686 | Trace waterfall: DNS → fetch → SSRF check → parse → links |
 | Prometheus | http://localhost:9091 | 12 alert rules, target health |
 | MinIO | http://localhost:9001 | Stored pages (login: `minioadmin` / `minioadmin`) |
@@ -22,7 +22,7 @@ Services: PostgreSQL (:5432), Dragonfly/Redis (:6379), Loki (:3100), Promtail, C
 ### What to observe
 
 1. **Grafana → Crawler Overview**: Fetch rate climbs, frontier drains to zero. Error rate stays green (< 5%).
-2. **Jaeger**: Service `ipf-crawler` → each trace shows the full pipeline for one URL.
+2. **Jaeger**: Service `hexcrawler` → each trace shows the full pipeline for one URL.
 3. **Grafana → Explore → Loki**: `{job="docker"} | json` shows structured logs with `traceId`. Click traceId → Jaeger.
 
 ## Kubernetes (k3d)
@@ -48,11 +48,11 @@ scripts/teardown-local.sh     # Tear down everything
 ### Port forwards
 
 ```bash
-kubectl port-forward -n ipf svc/grafana 3000:3000
-kubectl port-forward -n ipf svc/jaeger 16686:16686
-kubectl port-forward -n ipf svc/prometheus 9091:9090
-kubectl port-forward -n ipf svc/loki 3100:3100
-kubectl port-forward -n ipf svc/mega-simulator 8080:8080
+kubectl port-forward -n hexcrawler svc/grafana 3000:3000
+kubectl port-forward -n hexcrawler svc/jaeger 16686:16686
+kubectl port-forward -n hexcrawler svc/prometheus 9091:9090
+kubectl port-forward -n hexcrawler svc/loki 3100:3100
+kubectl port-forward -n hexcrawler svc/mega-simulator 8080:8080
 kubectl port-forward svc/argocd-server -n argocd 8443:443
 kubectl port-forward svc/chaos-dashboard -n chaos-mesh 2333:2333
 ```

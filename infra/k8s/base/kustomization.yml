@@ -2,7 +2,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: ipf
+namespace: hexcrawler
 
 resources:
 - namespace.yml
@@ -16,12 +16,12 @@ resources:
 labels:
 - pairs:
     app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/part-of: ipf-crawler
+    app.kubernetes.io/part-of: hexcrawler
 
 # Image tags — updated by release pipeline (T-CICD-019, REQ-CICD-020)
 # CI runs `kustomize edit set image` to set newName (registry) and newTag (SHA).
 # Initial newTag: unreleased — first release pipeline run populates real values.
 images:
-- name: ipf-crawler
-  newName: ghcr.io/r-irbe/octupus-crawler/crawler
+- name: hexcrawler
+  newName: ghcr.io/r-irbe/hexcrawler/crawler
   newTag: sha-049a8c3

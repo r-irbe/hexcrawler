@@ -140,13 +140,13 @@ receivers:
   - name: 'slack-alerts'
     slack_configs:
       - api_url: '$SLACK_WEBHOOK_URL'
-        channel: '#ipf-alerts'
+        channel: '#hexcrawler-alerts'
   - name: 'log-only'
     webhook_configs: []
   - name: 'default'
     slack_configs:
       - api_url: '$SLACK_WEBHOOK_URL'
-        channel: '#ipf-alerts'
+        channel: '#hexcrawler-alerts'
 ```
 
 All alerts include annotations (REQ-ALERT-017):
@@ -161,7 +161,7 @@ All alerts include annotations (REQ-ALERT-017):
   annotations:
     summary: "High fetch error rate ({{ $value | humanizePercentage }})"
     description: "Error rate is {{ $value | humanizePercentage }} over the last 2 minutes. Threshold: 50%."
-    runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-error-rate"
+    runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-error-rate"
 ```
 
 ## 4. Design Decisions

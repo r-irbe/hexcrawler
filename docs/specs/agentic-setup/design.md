@@ -1079,15 +1079,15 @@ graph LR
 
 ```typescript
 // packages/eslint-config/src/rules/layer-boundaries.ts
-// Rule: @ipf/no-infra-in-domain
+// Rule: @hexcrawler/no-infra-in-domain
 // Matches: packages/core/src/domain/**/*.ts
 // Blocks: imports from **/infrastructure/**, **/infra/**
 
-// Rule: @ipf/no-app-in-infra
+// Rule: @hexcrawler/no-app-in-infra
 // Matches: packages/*/src/infrastructure/**/*.ts
 // Blocks: imports from **/application/**
 
-// Rule: @ipf/otel-first-import
+// Rule: @hexcrawler/otel-first-import
 // Matches: apps/*/src/main.ts
 // Requires: first import statement is './otel' or '../otel'
 ```

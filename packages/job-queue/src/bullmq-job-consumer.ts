@@ -2,7 +2,7 @@
 // Implements: T-ARCH-009, ADR-002 (BullMQ Worker), ADR-015 (hexagonal)
 
 import { Worker, type ConnectionOptions, type Job } from 'bullmq';
-import type { JobConsumer } from '@ipf/core/contracts/job-consumer';
+import type { JobConsumer } from '@hexcrawler/core/contracts/job-consumer';
 import type { BullMQConnection, QueueConfig } from './connection-config.js';
 
 /** Job data shape that flows through the queue. */

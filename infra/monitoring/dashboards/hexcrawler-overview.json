@@ -179,11 +179,11 @@
     }
   ],
   "schemaVersion": 39,
-  "tags": ["ipf", "crawler"],
+  "tags": ["hexcrawler", "crawler"],
   "templating": { "list": [] },
   "time": { "from": "now-1h", "to": "now" },
   "timepicker": {},
   "timezone": "browser",
-  "title": "IPF Crawler Overview",
-  "uid": "ipf-crawler-overview"
+  "title": "hexcrawler Overview",
+  "uid": "hexcrawler-overview"
 }

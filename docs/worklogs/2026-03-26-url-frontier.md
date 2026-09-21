@@ -5,13 +5,13 @@
 | Date | 2026-03-26 |
 | Branch | `work/url-frontier` |
 | Commit | `6f50cb8` |
-| Package | `@ipf/url-frontier` |
+| Package | `@hexcrawler/url-frontier` |
 | Tests | 45 (41 unit + 4 property) |
 | Total suite | 441 tests |
 
 ## Summary
 
-Implemented the `@ipf/url-frontier` package — the URL deduplication and BFS-priority enqueueing layer wrapping a `QueueBackend` port interface (ADR-015 hexagonal pattern).
+Implemented the `@hexcrawler/url-frontier` package — the URL deduplication and BFS-priority enqueueing layer wrapping a `QueueBackend` port interface (ADR-015 hexagonal pattern).
 
 ## Files Created
 

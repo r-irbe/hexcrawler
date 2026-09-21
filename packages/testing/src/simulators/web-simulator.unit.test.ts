@@ -208,7 +208,7 @@ describe('built-in scenarios', () => {
     expect(text).toContain('Disallow: /admin');
     expect(text).toContain('Disallow: /private');
     expect(text).toContain('Crawl-delay: 1');
-    expect(text).toContain('User-agent: ipf-crawler');
+    expect(text).toContain('User-agent: hexcrawler');
     expect(text).toContain('Allow: /admin/public');
   });
 

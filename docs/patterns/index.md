@@ -1,6 +1,6 @@
 # Patterns
 
-Implementation patterns for the IPF distributed crawler. Each pattern documents a reusable solution to a common problem in the codebase.
+Implementation patterns for hexcrawler. Each pattern documents a reusable solution to a common problem in the codebase.
 
 ## Documents
 
@@ -14,4 +14,4 @@ Implementation patterns for the IPF distributed crawler. Each pattern documents 
 
 ---
 
-> **Provenance**: Created 2026-03-25. Pattern documentation directory for the IPF distributed crawler.
+> **Provenance**: Created 2026-03-25. Pattern documentation directory for hexcrawler.

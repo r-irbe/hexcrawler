@@ -2,8 +2,8 @@
 // Validates: T-LIFE-049 → REQ-LIFE-033, REQ-LIFE-034
 
 import { describe, it, expect } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { StartupPhase } from './startup-orchestrator.js';
 import { executeStartupSequence, StartupError } from './startup-orchestrator.js';
 import { createConsumerPhase } from './consumer-phase.js';

@@ -4,9 +4,9 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
 import { createWorkerProcessor } from './worker-processor.js';
 import type { WorkerProcessorDeps, PipelineExecutor } from './worker-processor.js';
 

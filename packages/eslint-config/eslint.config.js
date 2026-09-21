@@ -1,4 +1,4 @@
-// Shared ESLint configuration for IPF monorepo
+// Shared ESLint configuration for hexcrawler monorepo
 // Implements: T-ARCH-016 (layer boundaries), T-ARCH-017 (no-cycle),
 //             T-ARCH-018 (test boundaries), T-ARCH-019 (contracts purity)
 // ADRs: ADR-015 (layered architecture), ADR-016 (coding standards)
@@ -165,10 +165,10 @@ export default tseslint.config(
   {
     files: ['apps/*/src/main.ts'],
     plugins: {
-      '@ipf': { rules: { 'otel-first-import': otelFirstImport } },
+      '@hexcrawler': { rules: { 'otel-first-import': otelFirstImport } },
     },
     rules: {
-      '@ipf/otel-first-import': 'error',
+      '@hexcrawler/otel-first-import': 'error',
     },
   },
 );

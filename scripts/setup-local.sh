@@ -5,8 +5,8 @@
 
 set -euo pipefail
 
-CLUSTER_NAME="${K3D_CLUSTER_NAME:-ipf-local}"
-REGISTRY_NAME="${K3D_REGISTRY_NAME:-ipf-registry.localhost}"
+CLUSTER_NAME="${K3D_CLUSTER_NAME:-hexcrawler-local}"
+REGISTRY_NAME="${K3D_REGISTRY_NAME:-hexcrawler-registry.localhost}"
 REGISTRY_PORT="${K3D_REGISTRY_PORT:-5111}"
 SERVERS="${K3D_SERVERS:-1}"
 AGENTS="${K3D_AGENTS:-2}"
@@ -15,7 +15,7 @@ START_TIME=$(date +%s)
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   IPF Local Kubernetes Setup             ║"
+echo "║   hexcrawler local Kubernetes Setup             ║"
 echo "╚══════════════════════════════════════════╝"
 echo ""
 
@@ -93,23 +93,23 @@ echo "━━━ Building & Pushing Images ━━━"
 REGISTRY="k3d-${REGISTRY_NAME}:${REGISTRY_PORT}"
 
 echo "Building mega-simulator..."
-docker build -t "${REGISTRY}/ipf-mega-simulator:latest" \
+docker build -t "${REGISTRY}/hexcrawler-mega-simulator:latest" \
   -f infra/docker/Dockerfile.mega-simulator . 2>/dev/null && \
-  docker push "${REGISTRY}/ipf-mega-simulator:latest" && \
+  docker push "${REGISTRY}/hexcrawler-mega-simulator:latest" && \
   echo "  mega-simulator pushed" || \
   echo "WARNING: mega-simulator build failed (non-critical)"
 
 echo "Building web-simulator..."
-docker build -t "${REGISTRY}/ipf-web-simulator:latest" \
+docker build -t "${REGISTRY}/hexcrawler-web-simulator:latest" \
   -f infra/docker/Dockerfile.web-simulator . 2>/dev/null && \
-  docker push "${REGISTRY}/ipf-web-simulator:latest" && \
+  docker push "${REGISTRY}/hexcrawler-web-simulator:latest" && \
   echo "  web-simulator pushed" || \
   echo "WARNING: web-simulator build failed (non-critical)"
 
 # ── Deploy Base + Monitoring ─────────────────────────
 echo ""
-echo "━━━ Deploying IPF Stack ━━━"
-kubectl create namespace ipf --dry-run=client -o yaml | kubectl apply -f -
+echo "━━━ Deploying hexcrawler stack ━━━"
+kubectl create namespace hexcrawler --dry-run=client -o yaml | kubectl apply -f -
 bash "$(dirname "$0")/create-dashboard-configmap.sh" || \
   echo "WARNING: dashboard configmap creation failed"
 # Use e2e overlay for local k3d (uses local registry images, not ghcr.io)
@@ -126,7 +126,7 @@ echo "╚═══════════════════════�
 echo ""
 echo "ArgoCD UI:     kubectl port-forward svc/argocd-server -n argocd 8443:443"
 echo "Chaos Mesh:    kubectl port-forward svc/chaos-dashboard -n chaos-mesh 2333:2333"
-echo "Grafana:       kubectl port-forward svc/grafana -n ipf 3000:3000"
-echo "Jaeger:        kubectl port-forward svc/jaeger -n ipf 16686:16686"
-echo "Prometheus:    kubectl port-forward svc/prometheus -n ipf 9091:9090"
+echo "Grafana:       kubectl port-forward svc/grafana -n hexcrawler 3000:3000"
+echo "Jaeger:        kubectl port-forward svc/jaeger -n hexcrawler 16686:16686"
+echo "Prometheus:    kubectl port-forward svc/prometheus -n hexcrawler 9091:9090"
 echo "To teardown:   scripts/teardown-local.sh"

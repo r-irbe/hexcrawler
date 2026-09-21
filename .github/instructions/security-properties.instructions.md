@@ -57,7 +57,7 @@ fcTest.prop('blocks redirect chains to reserved IPs', [arbRedirectChain], ...);
 
 ## Generators
 
-Import from `@ipf/testing/generators/`:
+Import from `@hexcrawler/testing/generators/`:
 
 - `rfc6890.generator` — `arbReservedIPv4`, `arbIPv4MappedIPv6`, `arbReservedIP`
 - `dns-rebinding.generator` — `arbTOCTOUPayload`, `arbRedirectChain`, `arbSchemeAbuse`

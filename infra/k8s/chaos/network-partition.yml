@@ -4,23 +4,23 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: NetworkChaos
 metadata:
   name: crawler-redis-partition
-  namespace: ipf
+  namespace: hexcrawler
   labels:
-    app.kubernetes.io/part-of: ipf-chaos-suite
+    app.kubernetes.io/part-of: hexcrawler-chaos-suite
     chaos-type: network-partition
 spec:
   action: partition
   mode: all
   selector:
     namespaces:
-      - ipf
+      - hexcrawler
     labelSelectors:
       app: crawler-worker
   direction: both
   target:
     selector:
       namespaces:
-        - ipf
+        - hexcrawler
       labelSelectors:
         app: dragonfly
     mode: all

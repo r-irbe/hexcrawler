@@ -2,8 +2,8 @@
 // Implements: T-LIFE-021 to 024, T-LIFE-027, T-LIFE-039, T-LIFE-041
 // REQ-LIFE-018 to 024, REQ-LIFE-029, REQ-LIFE-031
 
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { ShutdownReason } from './shutdown-reason.js';
 import { shutdownReasonLabel } from './shutdown-reason.js';
 

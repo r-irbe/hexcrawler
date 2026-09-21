@@ -3,7 +3,7 @@
 // Implements: T-RES-024
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Redis } from 'ioredis';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createSlidingWindowRateLimiter } from './sliding-window-rate-limiter.js';
 
 describe('SlidingWindowRateLimiter (integration)', () => {

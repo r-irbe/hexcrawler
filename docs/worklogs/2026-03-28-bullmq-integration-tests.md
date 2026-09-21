@@ -2,7 +2,7 @@
 
 ## Summary
 
-Added BullMQ integration tests across 4 downstream packages now unblocked by `@ipf/job-queue` adapter. Fixed circular dependency in package graph.
+Added BullMQ integration tests across 4 downstream packages now unblocked by `@hexcrawler/job-queue` adapter. Fixed circular dependency in package graph.
 
 ## Changes
 
@@ -15,11 +15,11 @@ Added BullMQ integration tests across 4 downstream packages now unblocked by `@i
 
 ### Modified Files (6)
 
-- `packages/job-queue/package.json` — Removed `@ipf/url-frontier` and `@ipf/completion-detection` from deps (circular dep fix)
+- `packages/job-queue/package.json` — Removed `@hexcrawler/url-frontier` and `@hexcrawler/completion-detection` from deps (circular dep fix)
 - `packages/job-queue/src/bullmq-queue-backend.ts` — Types locally declared with SYNC comments
 - `packages/job-queue/src/bullmq-queue-adapter.ts` — QueueAdapter type locally declared with SYNC comment
 - `packages/job-queue/src/bullmq-adapters.integration.test.ts` — Imports changed to local
-- 4 package.json files — Added `@ipf/job-queue` and `bullmq` as devDependencies
+- 4 package.json files — Added `@hexcrawler/job-queue` and `bullmq` as devDependencies
 
 ## Tasks Completed
 
@@ -37,7 +37,7 @@ Added BullMQ integration tests across 4 downstream packages now unblocked by `@i
 
 ## Key Decisions
 
-1. **Circular dep fix via structural typing**: Rather than moving types to `@ipf/core`, locally declared structurally-compatible types in `@ipf/job-queue`. Integration tests in consumer packages verify compatibility at compile time.
+1. **Circular dep fix via structural typing**: Rather than moving types to `@hexcrawler/core`, locally declared structurally-compatible types in `@hexcrawler/job-queue`. Integration tests in consumer packages verify compatibility at compile time.
 
 2. **BullMQ stalled-check key behavior**: Discovered that the `stalled-check` Redis key uses `stalledInterval` as TTL. Workers sharing a queue must use compatible values or the longer TTL blocks shorter-interval stalled detection.
 

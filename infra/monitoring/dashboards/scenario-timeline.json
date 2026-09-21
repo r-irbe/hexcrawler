@@ -151,8 +151,8 @@
       {
         "name": "namespace",
         "type": "custom",
-        "current": { "text": "ipf", "value": "ipf" },
-        "options": [{ "text": "ipf", "value": "ipf" }]
+        "current": { "text": "hexcrawler", "value": "hexcrawler" },
+        "options": [{ "text": "hexcrawler", "value": "hexcrawler" }]
       }
     ]
   },

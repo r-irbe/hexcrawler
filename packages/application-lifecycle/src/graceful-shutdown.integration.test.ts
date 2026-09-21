@@ -3,10 +3,10 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, Worker, type ConnectionOptions } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema } from '@ipf/job-queue/connection-config';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
-import type { Logger } from '@ipf/core/contracts/logger';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema } from '@hexcrawler/job-queue/connection-config';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createShutdownOrchestrator } from './graceful-shutdown.js';
 import type { ShutdownDeps, TeardownEntry } from './graceful-shutdown.js';
 import { signalReason } from './shutdown-reason.js';

@@ -3,7 +3,7 @@
 // Implements: T-COMM-025
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Redis } from 'ioredis';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import { createIdempotencyStore, type CachedResponse } from './idempotency-store.js';
 
 describe('IdempotencyStore (integration)', () => {

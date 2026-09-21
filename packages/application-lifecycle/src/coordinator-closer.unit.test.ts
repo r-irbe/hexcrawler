@@ -4,7 +4,7 @@
 import { describe, it, expect } from 'vitest';
 import { coordinatorAsDisposable } from './coordinator-closer.js';
 import type { Coordinator } from './coordinator-closer.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 const noop = (): void => { /* no-op */ };
 

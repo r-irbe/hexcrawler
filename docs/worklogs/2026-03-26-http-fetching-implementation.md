@@ -9,7 +9,7 @@
 
 ## Summary
 
-Implemented the HTTP Fetching package (`@ipf/http-fetching`) — core HTTP client with manual redirect loop, per-hop SSRF validation, politeness enforcement, stream processing, and error classification.
+Implemented the HTTP Fetching package (`@hexcrawler/http-fetching`) — core HTTP client with manual redirect loop, per-hop SSRF validation, politeness enforcement, stream processing, and error classification.
 
 ## Files Created
 
@@ -46,7 +46,7 @@ Implemented the HTTP Fetching package (`@ipf/http-fetching`) — core HTTP clien
 
 | ID | Severity | Finding | Resolution |
 | --- | --- | --- | --- |
-| F-01 | Major | Local SsrfCheckResult instead of importing SsrfValidationResult | Fixed: import from @ipf/ssrf-guard |
+| F-01 | Major | Local SsrfCheckResult instead of importing SsrfValidationResult | Fixed: import from @hexcrawler/ssrf-guard |
 | F-02 | Minor | PolitenessController not integrated in httpFetch | Documented: caller orchestrates |
 | F-03 | Minor | classifyAbortError always uses timeoutMs: 0 | Fixed: added classifyTimeout with config.timeoutMs |
 | F-07 | Minor | No timeout test | Fixed: added slow client + short timeoutMs test |

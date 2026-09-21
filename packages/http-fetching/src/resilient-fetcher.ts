@@ -3,8 +3,8 @@
 // Layer 1 (rate limit) checked pre-call; layers 2–5 applied via cockatiel policy
 
 import { err } from 'neverthrow';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { FetchError } from '@ipf/core/errors/fetch-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
 import { httpFetch } from './http-fetcher.js';
 import type { HttpClient, FetcherConfig, SsrfValidator, FetchResultData } from './http-fetcher.js';
 import type { FetchMetrics } from './fetch-types.js';

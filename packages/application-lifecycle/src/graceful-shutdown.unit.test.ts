@@ -5,7 +5,7 @@
 // Validates REQ-LIFE-029: Readiness probe 503 immediately on shutdown start
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createShutdownOrchestrator } from './graceful-shutdown.js';
 import type { ShutdownDeps, TeardownEntry } from './graceful-shutdown.js';
 import { signalReason, completionReason } from './shutdown-reason.js';

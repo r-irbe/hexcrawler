@@ -42,7 +42,7 @@ CHECKS=(
   "kind: Pod"
   "name: web-simulator"
   "kind: Namespace"
-  "name: ipf"
+  "name: hexcrawler"
 )
 
 for check in "${CHECKS[@]}"; do
@@ -62,7 +62,7 @@ else
 fi
 
 # Verify web-simulator image reference
-if echo "$OUTPUT" | grep -q "k3d-ipf-registry.localhost:5111"; then
+if echo "$OUTPUT" | grep -q "k3d-hexcrawler-registry.localhost:5111"; then
   echo "✓ Local registry image references present"
 else
   echo "⚠ Local registry image references not found"

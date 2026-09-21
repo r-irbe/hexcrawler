@@ -8,7 +8,7 @@
 
 ## Summary
 
-Created the complete AI agent framework for the IPF distributed crawler project: 11 agents, 14 skills, 6 instructions, orchestration protocol, and full CLAUDE.md routing integration.
+Created the complete AI agent framework for the hexcrawler project: 11 agents, 14 skills, 6 instructions, orchestration protocol, and full CLAUDE.md routing integration.
 
 ## Work Completed
 

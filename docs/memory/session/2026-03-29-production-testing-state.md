@@ -39,7 +39,7 @@
 | Last completed gate | G7 (state update) |
 | Guard function status | `pass` (typecheck + lint + test all green) |
 | Commits on branch | 2 (be5b133 specs, db3133e implementation) |
-| Tests passing | 56 in @ipf/testing (10 new), all 13 packages green |
+| Tests passing | 56 in @hexcrawler/testing (10 new), all 13 packages green |
 | Blockers | T-PROD-016 deferred (k6 not installed) |
 
 ## Decisions Log

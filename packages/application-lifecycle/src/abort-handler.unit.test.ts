@@ -1,7 +1,7 @@
 // Validates REQ-LIFE-030: Abort at exactly N consecutive failures, deterministic
 
 import { describe, it, expect } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createAbortHandler } from './abort-handler.js';
 
 function recLogger(): Logger {

@@ -9,7 +9,7 @@
 
 ## Context
 
-The IPF crawler operates as a distributed system with significant domain complexity (URL lifecycle management, per-domain rate policies, tiered fetching strategies, job scheduling with priority and retry semantics). Without explicit architectural patterns, code coupling grows organically — infrastructure concerns bleed into domain logic, database schemas drive API shapes, and changes ripple unpredictably across layers.
+The hexcrawler operates as a distributed system with significant domain complexity (URL lifecycle management, per-domain rate policies, tiered fetching strategies, job scheduling with priority and retry semantics). Without explicit architectural patterns, code coupling grows organically — infrastructure concerns bleed into domain logic, database schemas drive API shapes, and changes ripple unpredictably across layers.
 
 The project needs a structural architecture that provides clear dependency direction, framework independence for domain logic, testability via adapter substitution, and fast feature delivery with minimal merge conflicts.
 
@@ -96,7 +96,7 @@ The system starts as a modular monolith deployed as a single process with hard m
 - Team size exceeds 30–40 developers requiring autonomous deployment boundaries
 - A module has genuinely different runtime requirements (e.g., Playwright worker vs API server)
 
-The IPF crawler has a natural extraction point: Playwright-based workers ARE a separate deployment due to browser resource requirements (ADR-008). The API, scheduler, and static crawler can remain co-deployed until scaling evidence demands otherwise.
+The hexcrawler has a natural extraction point: Playwright-based workers ARE a separate deployment due to browser resource requirements (ADR-008). The API, scheduler, and static crawler can remain co-deployed until scaling evidence demands otherwise.
 
 ### 6. Feature-Based Folder Structure
 

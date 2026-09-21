@@ -101,9 +101,9 @@ All dashboards **shall** be auto-provisioned via Grafana provisioning (JSON file
 
 ### REQ-LTO-020: ArgoCD Deployment in k3d
 
-The `setup-local.sh` script **shall** install ArgoCD into the k3d cluster and create an ArgoCD Application pointing to the IPF Kustomize overlay.
+The `setup-local.sh` script **shall** install ArgoCD into the k3d cluster and create an ArgoCD Application pointing to the hexcrawler Kustomize overlay.
 
-**Acceptance**: After `pnpm k8s:setup`, ArgoCD UI is accessible via port-forward on port 8443, and the IPF application shows as Synced/Healthy.
+**Acceptance**: After `pnpm k8s:setup`, ArgoCD UI is accessible via port-forward on port 8443, and the hexcrawler shows as Synced/Healthy.
 
 ### REQ-LTO-021: ArgoCD Grafana Datasource
 

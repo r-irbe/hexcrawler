@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/config",
+  "name": "@hexcrawler/config",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -20,7 +20,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
     "eslint": "^10.2.0",
     "typescript": "^6.0.2",
     "vitest": "^4.1.4"

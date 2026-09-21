@@ -7,7 +7,7 @@ import { describe, it, expect } from 'vitest';
 import pino from 'pino';
 import { Writable } from 'node:stream';
 import { wrapPino, createPinoLogger, createJobLogger } from './pino-logger.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 interface LogRecord {
   level: number;

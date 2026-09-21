@@ -5,7 +5,7 @@ import { describe, it, expect } from 'vitest';
 import { Readable } from 'node:stream';
 import { httpFetch } from './http-fetcher.js';
 import type { HttpClient, FetcherConfig } from './http-fetcher.js';
-import type { SsrfValidationResult } from '@ipf/ssrf-guard/ssrf-types';
+import type { SsrfValidationResult } from '@hexcrawler/ssrf-guard/ssrf-types';
 import type { FetchMetrics } from './fetch-types.js';
 
 // --- Test helpers ---

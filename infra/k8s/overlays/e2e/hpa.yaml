@@ -5,7 +5,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: crawler-worker
-  namespace: ipf
+  namespace: hexcrawler
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

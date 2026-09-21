@@ -40,6 +40,6 @@
 
 | # | Decision | Rationale |
 | --- | --- | --- |
-| 1 | Rate limiter in packages/resilience | Extends existing 7-layer stack, uses @ipf/redis |
+| 1 | Rate limiter in packages/resilience | Extends existing 7-layer stack, uses @hexcrawler/redis |
 | 2 | DLQ handler in packages/job-queue | Co-located with BullMQ adapter per VSA |
 | 3 | Redis ZRANGEBYSCORE sliding window | Design doc specifies INCR+EXPIRE but sorted set is more accurate |

@@ -2,11 +2,11 @@
 // Implements: T-COORD-008 to 011, REQ-DIST-017 to 020
 
 import { ok, err, type Result } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlState, CrawlProgress, ControlPlane } from '@ipf/core/contracts/control-plane';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlState, CrawlProgress, ControlPlane } from '@hexcrawler/core/contracts/control-plane';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 
 export type QueueAdapter = {
   getJobCounts(): AsyncResult<{ waiting: number; active: number; completed: number; failed: number; delayed: number; paused: number }, QueueError>;

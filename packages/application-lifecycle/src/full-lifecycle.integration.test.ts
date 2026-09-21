@@ -3,11 +3,11 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, Worker, type ConnectionOptions, type Job } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema } from '@ipf/job-queue/connection-config';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema } from '@hexcrawler/job-queue/connection-config';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { StartupPhase } from './startup-orchestrator.js';
 import { executeStartupSequence, StartupError, validateSeeds } from './startup-orchestrator.js';
 import { createConsumerPhase } from './consumer-phase.js';

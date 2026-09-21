@@ -15,4 +15,4 @@ Technical analysis documents, research, comparisons, and evaluations that inform
 
 ---
 
-> **Provenance**: Created 2026-03-24. Index of technical analysis documents for the IPF distributed crawler.
+> **Provenance**: Created 2026-03-24. Index of technical analysis documents for hexcrawler.

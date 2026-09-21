@@ -5,7 +5,7 @@ import pg from 'pg';
 import {
   startPostgresContainer,
   type ManagedPostgresContainer,
-} from '@ipf/testing/containers/postgres';
+} from '@hexcrawler/testing/containers/postgres';
 import { createDrizzle, type DrizzleDB } from './connection/drizzle.js';
 
 // SYNC WARNING: This SQL must match the Drizzle schema in schema/crawl-urls.ts.

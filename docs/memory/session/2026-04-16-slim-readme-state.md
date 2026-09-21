@@ -23,4 +23,4 @@
 
 ## Current State
 
-All tasks complete. PR #13 open at https://github.com/r-irbe/octupus-crawler/pull/13
+All tasks complete. PR #13 open at https://github.com/r-irbe/hexcrawler/pull/13

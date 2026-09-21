@@ -1,7 +1,7 @@
 // Process handlers — uncaughtException, unhandledRejection, main wrapper
 // Implements: T-LIFE-016 to 020, REQ-LIFE-013 to 017
 
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import type { ShutdownReason } from './shutdown-reason.js';
 import { errorReason, abortReason, completionReason } from './shutdown-reason.js';
 import type { ExitCode } from './exit-codes.js';

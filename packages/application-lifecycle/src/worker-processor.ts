@@ -2,9 +2,9 @@
 // Implements: T-LIFE-028 to 031, REQ-LIFE-025 to 028
 
 import type { Result } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
 import { z } from 'zod/v4';
 
 // REQ-LIFE-025: Zod schema for job payload validation

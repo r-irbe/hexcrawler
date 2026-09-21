@@ -3,10 +3,10 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { Frontier, FrontierEntry, FrontierSize } from '@ipf/core/contracts/frontier';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { Frontier, FrontierEntry, FrontierSize } from '@hexcrawler/core/contracts/frontier';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { enqueueUrls } from './enqueue-stage.js';
 import type { CrawlFrontierEntry } from './crawl-types.js';
 

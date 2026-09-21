@@ -1,7 +1,7 @@
 // Abort handler — deterministic state-store failure tracking
 // Implements: T-LIFE-040, REQ-LIFE-030
 
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export type AbortConfig = {
   readonly maxConsecutiveFailures: number;

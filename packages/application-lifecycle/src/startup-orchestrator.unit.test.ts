@@ -5,9 +5,9 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Config } from '@ipf/config/config-schema';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Config } from '@hexcrawler/config/config-schema';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import {
   validateConfig,
   validateSeeds,

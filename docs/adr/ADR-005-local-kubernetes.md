@@ -86,13 +86,13 @@ Adopt **k3d** as the local Kubernetes development and CI environment.
 # scripts/setup-local.sh
 
 # Create local registry
-k3d registry create ipf-registry.localhost --port 5111
+k3d registry create hexcrawler-registry.localhost --port 5111
 
 # Create cluster with local registry
-k3d cluster create ipf-local \
+k3d cluster create hexcrawler-local \
   --servers 1 \
   --agents 3 \
-  --registry-use k3d-ipf-registry.localhost:5111 \
+  --registry-use k3d-hexcrawler-registry.localhost:5111 \
   --port "8080:80@loadbalancer" \
   --port "8443:443@loadbalancer" \
   --k3s-arg "--disable=traefik@server:0" \

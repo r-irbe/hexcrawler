@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/api-router",
+  "name": "@hexcrawler/api-router",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -25,7 +25,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
     "@types/node": "^22.19.17",
     "eslint": "^10.2.0",
     "typescript": "^6.0.2",

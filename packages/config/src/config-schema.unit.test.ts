@@ -116,7 +116,7 @@ describe('ConfigSchema — lifecycle fields', () => {
       expect(result.data.CRAWL_MAX_RETRIES).toBe(3);
       expect(result.data.CRAWL_MAX_REDIRECTS).toBe(5);
       expect(result.data.CRAWL_MAX_RESPONSE_BYTES).toBe(10_485_760);
-      expect(result.data.CRAWL_USER_AGENT).toBe('IPF-Crawler/1.0');
+      expect(result.data.CRAWL_USER_AGENT).toBe('hexcrawler/1.0');
       expect(result.data.ALLOW_PRIVATE_IPS).toBe(false);
       expect(result.data.METRICS_PORT).toBe(9090);
     }

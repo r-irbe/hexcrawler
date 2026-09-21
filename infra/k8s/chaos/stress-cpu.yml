@@ -4,15 +4,15 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: StressChaos
 metadata:
   name: crawler-cpu-stress
-  namespace: ipf
+  namespace: hexcrawler
   labels:
-    app.kubernetes.io/part-of: ipf-chaos-suite
+    app.kubernetes.io/part-of: hexcrawler-chaos-suite
     chaos-type: cpu-stress
 spec:
   mode: one
   selector:
     namespaces:
-      - ipf
+      - hexcrawler
     labelSelectors:
       app: crawler-worker
   stressors:

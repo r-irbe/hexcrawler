@@ -3,12 +3,12 @@
 
 import { Queue, type ConnectionOptions } from 'bullmq';
 import { ok, err } from 'neverthrow';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 import type { QueueConfig, BullMQConnection } from './connection-config.js';
 
-// SYNC: must match @ipf/url-frontier/src/queue-backend.ts types.
+// SYNC: must match @hexcrawler/url-frontier/src/queue-backend.ts types.
 // Mirrored here to avoid circular dependency (job-queue → url-frontier → job-queue).
 // Integration tests in url-frontier verify structural compatibility at compile time.
 export type JobData = { readonly url: string; readonly depth: number };

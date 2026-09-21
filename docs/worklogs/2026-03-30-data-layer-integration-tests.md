@@ -21,7 +21,7 @@
 
 ### Modified Files
 
-- `packages/database/package.json` — added @ipf/testing dev dependency
+- `packages/database/package.json` — added @hexcrawler/testing dev dependency
 - `packages/testing/package.json` — added postgres/minio container exports
 
 ## Decisions

@@ -4,9 +4,9 @@
 // Tasks: T-WORK-008
 
 import { describe, it, expect, vi } from 'vitest';
-import type { JobConsumer } from '@ipf/core/contracts/job-consumer';
-import type { JobEventSource } from '@ipf/core/contracts/job-event-source';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { JobConsumer } from '@hexcrawler/core/contracts/job-consumer';
+import type { JobEventSource } from '@hexcrawler/core/contracts/job-event-source';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 import { JobConsumerAdapter } from './job-consumer-adapter.js';
 import { createStalledJobConfig } from './stalled-job-config.js';
 

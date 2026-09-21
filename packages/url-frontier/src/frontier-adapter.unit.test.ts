@@ -4,9 +4,9 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { FrontierEntry } from '@ipf/core/contracts/frontier';
-import { createQueueError } from '@ipf/core/errors/queue-error';
-import type { QueueError } from '@ipf/core/errors/queue-error';
+import type { FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
 import { createFrontierAdapter } from './frontier-adapter.js';
 import type { QueueBackend, JobSpec, BulkAddResult } from './queue-backend.js';
 import type { CollisionMetrics } from './collision-detector.js';

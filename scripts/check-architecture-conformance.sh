@@ -57,9 +57,9 @@ echo ""
 echo "=== Checking for circular package dependencies ==="
 
 # packages/ must never depend on apps/ (dependency rule: inward only)
-INWARD_VIOLATIONS=$(grep -rn '"@ipf/' --include='package.json' packages/ 2>/dev/null | while IFS=: read -r file line content; do
+INWARD_VIOLATIONS=$(grep -rn '"@hexcrawler/' --include='package.json' packages/ 2>/dev/null | while IFS=: read -r file line content; do
   # Extract referenced package
-  PKG=$(echo "$content" | grep -oE '"@ipf/[^"]+' | head -1 | sed 's/"@ipf\///')
+  PKG=$(echo "$content" | grep -oE '"@hexcrawler/[^"]+' | head -1 | sed 's/"@hexcrawler\///')
   if [ -n "$PKG" ]; then
     # Check if the referenced package is in apps/
     if [ -d "apps/$PKG" ]; then

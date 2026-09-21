@@ -5,7 +5,7 @@
 import { context, trace, propagation, SpanKind, SpanStatusCode } from '@opentelemetry/api';
 import type { Span } from '@opentelemetry/api';
 
-const TRACER_NAME = 'ipf-api-router';
+const TRACER_NAME = 'hexcrawler-api-router';
 
 // --- Server-side middleware function ---
 
@@ -36,7 +36,7 @@ export function otelMiddlewareFn(opts: {
       attributes: {
         'rpc.system': 'trpc',
         'rpc.method': opts.path,
-        'rpc.service': 'ipf-api-router',
+        'rpc.service': 'hexcrawler-api-router',
         'trpc.type': opts.type,
       },
     },

@@ -3,9 +3,9 @@
 // REQ-LIFE-001 to 006, REQ-LIFE-033, REQ-LIFE-034
 
 import type { Result } from 'neverthrow';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Config } from '@ipf/config/config-schema';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Config } from '@hexcrawler/config/config-schema';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 
 export type StartupPhase = {
   readonly name: string;

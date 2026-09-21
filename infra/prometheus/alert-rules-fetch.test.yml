@@ -1,4 +1,4 @@
-# IPF Crawler — Alert Rule Tests Part 1 (Fetching & Latency)
+# hexcrawler — Alert Rule Tests Part 1 (Fetching & Latency)
 # Implements: REQ-ALERT-013 (fire + no-fire), REQ-ALERT-015 (edge cases)
 # Covers: HighErrorRate, ZeroFetchRate, StalledJobs, P95/P99 Latency
 # Run: promtool test rules alert-rules-fetch.test.yml
@@ -29,7 +29,7 @@ tests:
             exp_annotations:
               summary: "High fetch error rate (66.67%)"
               description: "Error rate is 66.67% over the last 2 minutes. Threshold: 50%. Minimum throughput guard: 0.1 req/s."
-              runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-error-rate"
+              runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-error-rate"
 
   # T-ALERT-013: Should NOT fire when error rate < 50%
   - interval: 1m
@@ -87,7 +87,7 @@ tests:
             exp_annotations:
               summary: "Zero successful fetches with non-empty frontier"
               description: "No successful fetches in the last 5 minutes while frontier contains 200 URLs. System may be deadlocked."
-              runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#zero-fetch-rate"
+              runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#zero-fetch-rate"
 
   # T-ALERT-013: Should NOT fire when fetches are succeeding
   - interval: 1m
@@ -131,7 +131,7 @@ tests:
             exp_annotations:
               summary: "High stalled job rate (100m/s)"
               description: "Stalled job rate is 100m/s over the last 2 minutes. Threshold: 0.05/s (~6 stalls per 2 min)."
-              runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#stalled-jobs"
+              runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#stalled-jobs"
 
   # T-ALERT-013: Should NOT fire on low stall rate
   - interval: 1m
@@ -167,7 +167,7 @@ tests:
             exp_annotations:
               summary: "P95 fetch latency above 10s (12.5s)"
               description: "P95 fetch latency is 12.5s over the last 3 minutes. Threshold: 10s (matches FETCH_TIMEOUT_MS)."
-              runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-latency"
+              runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-latency"
 
   # T-ALERT-013: Should NOT fire when P95 below threshold
   - interval: 1m
@@ -209,7 +209,7 @@ tests:
             exp_annotations:
               summary: "P99 fetch latency above 15s (22.5s)"
               description: "P99 fetch latency is 22.5s over the last 5 minutes. Threshold: 15s (1.5x FETCH_TIMEOUT_MS). Indicates systemic degradation."
-              runbook_url: "https://github.com/ipf/ipf/wiki/Runbooks#high-latency"
+              runbook_url: "https://github.com/r-irbe/hexcrawler/wiki/Runbooks#high-latency"
 
   # T-ALERT-013: Should NOT fire when P99 below threshold
   - interval: 1m

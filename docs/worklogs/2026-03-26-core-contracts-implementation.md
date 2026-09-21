@@ -11,14 +11,14 @@
 
 ## Summary
 
-Implemented the core-contracts specification — the foundation of the IPF Crawler's clean architecture. This covers all contract interfaces, discriminated union error types, branded domain types, Zod-validated configuration, composition root with DI, signal handlers, static analysis enforcement, and architecture compliance tests.
+Implemented the core-contracts specification — the foundation of the hexcrawler's clean architecture. This covers all contract interfaces, discriminated union error types, branded domain types, Zod-validated configuration, composition root with DI, signal handlers, static analysis enforcement, and architecture compliance tests.
 
 ## Stats
 
 - **63 files changed**, 4,645 insertions, 37 deletions
 - **88 tests** across 15 test files (65 core + 23 config)
 - **22 source files** (18 core + 4 config)
-- **4 packages** touched: `@ipf/core`, `@ipf/config`, `@ipf/eslint-config`, `@ipf/testing`
+- **4 packages** touched: `@hexcrawler/core`, `@hexcrawler/config`, `@hexcrawler/eslint-config`, `@hexcrawler/testing`
 
 ## Completed Phases
 

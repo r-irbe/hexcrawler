@@ -2,9 +2,9 @@
 // Implements: T-CRAWL-010, REQ-CRAWL-009, REQ-CRAWL-010, REQ-CRAWL-011, REQ-CRAWL-012
 
 import { ok, err, type Result } from 'neverthrow';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { parseCrawlUrl } from './crawl-url-factory.js';
 import { createLinkExtractError, type CrawlFetchResult, type LinkExtractError } from './crawl-types.js';
 import { hasControlChars, isTooLong } from './url-normalizer.js';

@@ -3,9 +3,9 @@
 // Tests the full adapter→tracker→metrics chain with concurrent job simulation
 
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import type { JobConsumer } from '@ipf/core/contracts/job-consumer';
-import type { JobEventSource } from '@ipf/core/contracts/job-event-source';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { JobConsumer } from '@hexcrawler/core/contracts/job-consumer';
+import type { JobEventSource } from '@hexcrawler/core/contracts/job-event-source';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 import { JobConsumerAdapter } from './job-consumer-adapter.js';
 import { WorkerMetricsReporter } from './worker-metrics.js';
 import { createStalledJobConfig } from './stalled-job-config.js';

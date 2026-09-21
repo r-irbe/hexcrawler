@@ -1,4 +1,4 @@
-# Promtail Configuration for IPF Crawler
+# Promtail Configuration for hexcrawler
 # Collects Docker container logs and ships to Loki
 # Implements: REQ-LTO-008, REQ-LTO-012
 

@@ -8,7 +8,7 @@
 
 ## Summary
 
-Implemented the SSRF Guard package (`@ipf/ssrf-guard`) providing URL validation against RFC 6890 reserved IP ranges with DNS pinning.
+Implemented the SSRF Guard package (`@hexcrawler/ssrf-guard`) providing URL validation against RFC 6890 reserved IP ranges with DNS pinning.
 
 ## Files Created
 

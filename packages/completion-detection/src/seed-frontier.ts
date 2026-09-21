@@ -2,10 +2,10 @@
 // Implements: T-COORD-011, REQ-DIST-020
 
 import { ok, err } from 'neverthrow';
-import type { Frontier, FrontierEntry } from '@ipf/core/contracts/frontier';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
+import type { Frontier, FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
 
 export type SeedResult = {
   readonly enqueued: number;

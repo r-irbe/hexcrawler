@@ -1,4 +1,4 @@
-# IPF Crawler — Documentation Index
+# hexcrawler — Documentation Index
 
 All docs follow [Documentation Standards](guidelines/documentation-standards.md) with provenance tracking.
 

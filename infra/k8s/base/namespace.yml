@@ -1,7 +1,7 @@
-# IPF Crawler — Kubernetes Namespace
+# hexcrawler — Kubernetes Namespace
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ipf
+  name: hexcrawler
   labels:
-    app.kubernetes.io/part-of: ipf-crawler
+    app.kubernetes.io/part-of: hexcrawler

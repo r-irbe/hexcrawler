@@ -17,7 +17,7 @@ Implemented Phase 1 + Phase 2 of the resilience-patterns spec plus property test
 | `packages/resilience/package.json` | Package config with cockatiel ^3.2.1 |
 | `packages/resilience/tsconfig.json` | Extends tsconfig.base.json |
 | `packages/resilience/vitest.config.ts` | Standard Vitest config |
-| `packages/resilience/eslint.config.js` | Re-exports @ipf/eslint-config |
+| `packages/resilience/eslint.config.js` | Re-exports @hexcrawler/eslint-config |
 | `packages/resilience/src/resilience-types.ts` | ResilienceConfig, DEFAULT_RESILIENCE_CONFIG, ResilienceError union |
 | `packages/resilience/src/circuit-breaker-registry.ts` | Per-domain CB factory with LRU eviction |
 | `packages/resilience/src/retry-policy.ts` | Retry with exponential backoff + idempotency guard |

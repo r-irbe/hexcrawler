@@ -3,13 +3,13 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import type { Fetcher, FetchConfig, FetchResult } from '@ipf/core/contracts/fetcher';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { FetchError } from '@ipf/core/errors/fetch-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { Fetcher, FetchConfig, FetchResult } from '@hexcrawler/core/contracts/fetcher';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { fetchEntry, mapFetchResult } from './fetch-stage.js';
 import type { CrawlFrontierEntry } from './crawl-types.js';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
 
 function makeUrl(raw: string): CrawlUrl {
   return createCrawlUrl({ raw, normalized: raw, domain: 'example.com' });

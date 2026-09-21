@@ -31,7 +31,7 @@
 - `log-explorer.json` — Volume by level, live logs, trace-correlated logs
 
 ### ArgoCD Integration
-- `infra/k8s/argocd/ipf-application.yml` — Application CRD with auto-sync
+- `infra/k8s/argocd/hexcrawler-application.yml` — Application CRD with auto-sync
 - `scripts/setup-local.sh` — ArgoCD install in k3d
 
 ### Chaos Mesh (5 experiment CRDs)

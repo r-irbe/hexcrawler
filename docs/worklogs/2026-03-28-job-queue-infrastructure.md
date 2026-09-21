@@ -56,7 +56,7 @@ This package unblocks 13+ deferred tasks across 6 specs: T-WORK-010, T-DIST-013/
 ## Learnings
 
 - Zod v4 uses `nonnegative()` not `nonneg()` — caught by typecheck
-- `@ipf/testing` exports Redis container under `./containers/redis` not `./containers/redis-container` — caught by typecheck
+- `@hexcrawler/testing` exports Redis container under `./containers/redis` not `./containers/redis-container` — caught by typecheck
 - BullMQ integration tests are fast (~1s for container reuse) when the Redis container is already running
 
 ---

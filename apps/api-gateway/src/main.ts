@@ -1,6 +1,6 @@
 // API Gateway — application entry point
 // MUST #9: import './otel' must be first when OTel SDK is configured
-// TODO: Add `import './otel'` when @ipf/observability OTel SDK init is wired
+// TODO: Add `import './otel'` when @hexcrawler/observability OTel SDK init is wired
 
 import { createServer } from './server.js';
 

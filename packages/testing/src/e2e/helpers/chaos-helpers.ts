@@ -7,7 +7,7 @@
 
 import { kubectl } from './k8s-helpers.js';
 
-const NAMESPACE = 'ipf';
+const NAMESPACE = 'hexcrawler';
 
 /** Force-delete a pod by name. */
 export async function killPod(

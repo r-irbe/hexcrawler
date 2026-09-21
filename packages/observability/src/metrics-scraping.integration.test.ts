@@ -3,8 +3,8 @@
 // Verifies the metrics HTTP server exposes Prometheus-compatible metrics
 
 import { describe, it, expect, afterAll } from 'vitest';
-import { createMetricsServer } from '@ipf/observability/metrics-server';
-import { createPromMetrics } from '@ipf/observability/prom-metrics';
+import { createMetricsServer } from '@hexcrawler/observability/metrics-server';
+import { createPromMetrics } from '@hexcrawler/observability/prom-metrics';
 import type { Server } from 'node:http';
 
 describe('Metrics endpoint scraping', () => {

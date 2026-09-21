@@ -24,8 +24,8 @@
 | 4 | T-DATA-005: DataError discriminated union | `done` | 17a7ecf | 7 variants + constructors |
 | 5 | T-DATA-017: CrawlURLRepository interface | `done` | 17a7ecf | domain port |
 | 6 | T-DATA-020: PageContentRepository interface | `done` | 17a7ecf | domain port (bonus) |
-| 7 | T-DATA-024: Zod config schema reference | `done` | 17a7ecf | already in @ipf/config |
-| 8 | T-DATA-025: Local/cloud S3 config support | `done` | 17a7ecf | already in @ipf/config |
+| 7 | T-DATA-024: Zod config schema reference | `done` | 17a7ecf | already in @hexcrawler/config |
+| 8 | T-DATA-025: Local/cloud S3 config support | `done` | 17a7ecf | already in @hexcrawler/config |
 | 9 | T-DATA-026: Unit tests | `done` | 17a7ecf | 20 tests, 2 files |
 
 ## Deferred
@@ -46,5 +46,5 @@ T-DATA-002 (Prisma), T-DATA-006-011 (schema definitions), T-DATA-012-016 (connec
 
 - Used `Uint8Array` instead of `Buffer` for PageContentRepository to avoid Node type dependency (Buffer extends Uint8Array)
 - T-DATA-020 (PageContentRepository interface) added as bonus — same self-contained port pattern
-- T-DATA-024/025 already satisfied by existing `@ipf/config` ConfigSchema
+- T-DATA-024/025 already satisfied by existing `@hexcrawler/config` ConfigSchema
 - TS 6 `Uint8Array` variance issue with ESLint — phantom error in IDE, tsc + eslint CLI both pass

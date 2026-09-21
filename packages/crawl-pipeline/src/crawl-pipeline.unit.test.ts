@@ -3,14 +3,14 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { Fetcher, FetchConfig, FetchResult } from '@ipf/core/contracts/fetcher';
-import type { Frontier, FrontierEntry, FrontierSize } from '@ipf/core/contracts/frontier';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { FetchError } from '@ipf/core/errors/fetch-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { Fetcher, FetchConfig, FetchResult } from '@hexcrawler/core/contracts/fetcher';
+import type { Frontier, FrontierEntry, FrontierSize } from '@hexcrawler/core/contracts/frontier';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { FetchError } from '@hexcrawler/core/errors/fetch-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { executePipeline, type PipelineDeps } from './crawl-pipeline.js';
 import type { CrawlFrontierEntry, PipelineConfig } from './crawl-types.js';
 import type { ResultLinkExtractor } from './discover-stage.js';

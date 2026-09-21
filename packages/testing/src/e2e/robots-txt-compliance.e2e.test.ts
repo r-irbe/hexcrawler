@@ -37,7 +37,7 @@ describe('Robots.txt compliance E2E', () => {
     );
     const text = await res.text();
 
-    expect(text).toContain('User-agent: ipf-crawler');
+    expect(text).toContain('User-agent: hexcrawler');
     expect(text).toContain('Disallow: /secret');
     expect(text).toContain('Allow: /admin/public');
   });

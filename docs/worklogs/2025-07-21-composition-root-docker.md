@@ -2,7 +2,7 @@
 
 ## Summary
 
-Created the composition root `main.ts` for the IPF Crawler, enabling Docker image build, compose-up, and Prometheus metrics scraping. This unblocked 4 deferred tasks that were blocked on missing Docker infrastructure.
+Created the composition root `main.ts` for hexcrawler, enabling Docker image build, compose-up, and Prometheus metrics scraping. This unblocked 4 deferred tasks that were blocked on missing Docker infrastructure.
 
 ## Changes
 
@@ -17,7 +17,7 @@ Created the composition root `main.ts` for the IPF Crawler, enabling Docker imag
 - **infra/docker/Dockerfile** — Changed CMD from compiled JS to tsx/esm TypeScript execution.
 - **infra/docker/docker-compose.dev.yml** — Fixed Dragonfly persistence flags, image tags (Prometheus v2.50.0, Grafana 10.4.0), memory constraints.
 - **package.json** — Added tsx as root dependency for Docker runtime.
-- **packages/application-lifecycle/package.json** — Added @ipf/observability, @ipf/job-queue, @ipf/url-frontier, @ipf/crawl-pipeline as dependencies.
+- **packages/application-lifecycle/package.json** — Added @hexcrawler/observability, @hexcrawler/job-queue, @hexcrawler/url-frontier, @hexcrawler/crawl-pipeline as dependencies.
 - **pnpm-lock.yaml** — Updated lockfile.
 
 ## Decisions

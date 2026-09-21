@@ -16,11 +16,11 @@ using TypeSpec.Rest;
 using TypeSpec.Versioning;
 
 // REQ-COMM-007: URL-prefix versioning (/api/v1/)
-/** Public API for the IPF distributed web crawler. Submit crawl jobs, monitor status, and check service health. */
+/** Public API for hexcrawler. Submit crawl jobs, monitor status, and check service health. */
 @versioned(Versions)
-@service(#{ title: "IPF Crawler API" })
+@service(#{ title: "hexcrawler API" })
 @server("http://localhost:3000", "Development server")
-namespace IPF.CrawlerAPI;
+namespace Hexcrawler.CrawlerAPI;
 
 enum Versions {
   v1: "v1",

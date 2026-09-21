@@ -8,7 +8,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { createTracer } from './tracer.js';
 import { InMemorySpanExporter } from './in-memory-exporter.js';
 import { NullLogger } from './null-logger.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 describe('createTracer (REQ-OBS-023)', () => {
   let shutdownFn: (() => Promise<void>) | undefined;

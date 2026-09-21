@@ -1,7 +1,7 @@
 // NullLogger — no-op Logger implementation for tests
 // Implements: T-OBS-005, REQ-OBS-007
 
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 export class NullLogger implements Logger {
   debug(_msg: string, _bindings?: Record<string, unknown>): void {

@@ -2,9 +2,9 @@
 // Implements: T-WORK-003 (concurrency), T-WORK-004 (start guard), T-WORK-005 (event registration)
 // Covers: REQ-DIST-007, REQ-DIST-009, REQ-DIST-010, REQ-DIST-011
 
-import type { JobConsumer } from '@ipf/core/contracts/job-consumer';
-import type { JobEventSource } from '@ipf/core/contracts/job-event-source';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { JobConsumer } from '@hexcrawler/core/contracts/job-consumer';
+import type { JobEventSource } from '@hexcrawler/core/contracts/job-event-source';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 import { UtilizationTracker } from './utilization-tracker.js';
 import type { StalledJobConfig } from './stalled-job-config.js';
 

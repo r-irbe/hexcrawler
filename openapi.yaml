@@ -1,12 +1,12 @@
 openapi: "3.1.0"
 info:
-  title: IPF Crawler API
+  title: hexcrawler API
   version: "1.0.0"
   description: |
-    Public management API for the IPF distributed web crawler.
+    Public management API for hexcrawler.
     Contract-first design per ADR-017.
   contact:
-    name: IPF Team
+    name: hexcrawler
   license:
     name: MIT
 
@@ -184,7 +184,7 @@ components:
           maxItems: 1000
           description: |
             Initial URLs to crawl. All URLs are validated server-side
-            against RFC 6890 reserved IP ranges via @ipf/ssrf-guard
+            against RFC 6890 reserved IP ranges via @hexcrawler/ssrf-guard
             before any fetch is attempted.
           example: ["https://example.com", "https://example.org/sitemap.xml"]
         maxDepth:
@@ -265,7 +265,7 @@ components:
           format: uri
           description: |
             URL to add to the frontier. Validated server-side against
-            RFC 6890 reserved IP ranges via @ipf/ssrf-guard.
+            RFC 6890 reserved IP ranges via @hexcrawler/ssrf-guard.
           example: "https://example.com/page"
         depth:
           type: integer

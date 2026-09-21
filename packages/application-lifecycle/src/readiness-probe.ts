@@ -3,8 +3,8 @@
 
 import { createServer } from 'node:http';
 import type { AddressInfo } from 'node:net';
-import type { Logger } from '@ipf/core/contracts/logger';
-import type { Disposable } from '@ipf/core/contracts/disposable';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
+import type { Disposable } from '@hexcrawler/core/contracts/disposable';
 import type { ReadinessProbe } from './graceful-shutdown.js';
 
 export type ReadinessProbeHandle = ReadinessProbe & Disposable & {

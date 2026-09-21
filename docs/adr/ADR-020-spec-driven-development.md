@@ -13,7 +13,7 @@ ADR-018 §3 introduced Spec-Driven Development (SDD) as a process for agentic co
 
 Research into SDD practices (see [docs/research/spec.md](../research/spec.md)) evaluated the full SDD landscape: Martin Fowler's three-level taxonomy (spec-first, spec-anchored, spec-as-source), EARS structured requirements, tooling (Kiro, GitHub Spec Kit, BMAD Method), quality gate frameworks, property-based testing integration, formal methods tiers, contract-first API design, agent runtime constraints, and human-AI collaboration patterns.
 
-This ADR establishes the comprehensive SDD methodology for IPF, extending ADR-018 §3 with the full specification hierarchy, requirement syntax standards, quality gate integration, and formal methods tier.
+This ADR establishes the comprehensive SDD methodology for hexcrawler, extending ADR-018 §3 with the full specification hierarchy, requirement syntax standards, quality gate integration, and formal methods tier.
 
 ## Decision Drivers
 
@@ -45,9 +45,9 @@ The relationship is hierarchical: **Spec → Acceptance Tests (BDD/ATDD) → Uni
 
 ### 1. Specification Level: Spec-Anchored
 
-IPF adopts the **spec-anchored** level from Martin Fowler's taxonomy: specifications are maintained throughout the feature lifecycle; changes start in the spec, and code is updated accordingly. Specs are committed alongside code in git.
+hexcrawler adopts the **spec-anchored** level from Martin Fowler's taxonomy: specifications are maintained throughout the feature lifecycle; changes start in the spec, and code is updated accordingly. Specs are committed alongside code in git.
 
-| Level | IPF Adoption |
+| Level | Adoption |
 | --- | --- |
 | Spec-first | Used for spikes and throwaway prototypes only |
 | **Spec-anchored** | **Default for all features and cross-cutting concerns** |
@@ -210,7 +210,7 @@ The asymmetric reading design: specs are structured for **AI-total / human-parti
 
 The 2026 SDD tooling ecosystem provides reference implementations for the patterns adopted in this ADR:
 
-| Tool | Approach | Key Mechanism | IPF Relevance |
+| Tool | Approach | Key Mechanism | Relevance |
 | --- | --- | --- | --- |
 | **Kiro** (AWS) | EARS-native steering files | Constitutional layer from codebase analysis + Hooks system for ambient enforcement (auto-update docs on file change, validate component rules on save) | EARS syntax (§2), hooks pattern informs ambient enforcement (future) |
 | **GitHub Spec Kit** | 6-stage workflow | Constitution → Specify → Clarify → Plan → Tasks → Implement; Always/Ask/Never constitutional boundaries | Three-document structure (§3), spec hierarchy (§4) |

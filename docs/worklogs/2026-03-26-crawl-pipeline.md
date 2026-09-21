@@ -6,7 +6,7 @@
 
 ## What Changed
 
-New package `@ipf/crawl-pipeline` implementing URL processing, pipeline stage composition, link discovery, and enqueue logic.
+New package `@hexcrawler/crawl-pipeline` implementing URL processing, pipeline stage composition, link discovery, and enqueue logic.
 
 ### Files Created (15 source + config)
 

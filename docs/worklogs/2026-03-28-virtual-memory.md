@@ -9,7 +9,7 @@
 
 ## Summary
 
-Implemented the `@ipf/virtual-memory` package — a context management system for AI agents to work within effective context windows. 8 modules, 69 unit tests, 20 new files (+2077 lines).
+Implemented the `@hexcrawler/virtual-memory` package — a context management system for AI agents to work within effective context windows. 8 modules, 69 unit tests, 20 new files (+2077 lines).
 
 ## Files Created
 

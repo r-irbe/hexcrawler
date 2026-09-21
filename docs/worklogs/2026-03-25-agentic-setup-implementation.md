@@ -9,7 +9,7 @@
 
 ## Summary
 
-Implemented the agentic-setup specification — the complete AI agent infrastructure for the IPF Crawler project. This covers Claude Code hooks/rules/skills/commands, Copilot agents/instructions/prompts, CI/CD validation workflows, security property test generators, and cross-cutting enforcement mechanisms.
+Implemented the agentic-setup specification — the complete AI agent infrastructure for the hexcrawler project. This covers Claude Code hooks/rules/skills/commands, Copilot agents/instructions/prompts, CI/CD validation workflows, security property test generators, and cross-cutting enforcement mechanisms.
 
 ## Completed Phases
 
@@ -137,9 +137,9 @@ Implemented the agentic-setup specification — the complete AI agent infrastruc
 
 | Task | Reason |
 | --- | --- |
-| T-087: ESLint rule `@ipf/no-infra-in-domain` | `packages/eslint-config/` has no source code yet — CI grep check added as interim |
-| T-088: ESLint rule `@ipf/no-app-in-infra` | Same — deferred until package scaffolding |
-| T-089: ESLint rule `@ipf/otel-first-import` | Same |
+| T-087: ESLint rule `@hexcrawler/no-infra-in-domain` | `packages/eslint-config/` has no source code yet — CI grep check added as interim |
+| T-088: ESLint rule `@hexcrawler/no-app-in-infra` | Same — deferred until package scaffolding |
+| T-089: ESLint rule `@hexcrawler/otel-first-import` | Same |
 | T-090: Verify `no-explicit-any` configured as error | Same — ESLint config package not yet scaffolded |
 
 ### Deferred to feature implementation (require feature specs to exist)

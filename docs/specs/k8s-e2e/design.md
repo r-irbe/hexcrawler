@@ -16,12 +16,12 @@ graph TD
         VITEST["Vitest E2E Runner"]
     end
 
-    subgraph k3d["k3d Cluster: ipf-local"]
-        subgraph NS["namespace: ipf"]
+    subgraph k3d["k3d Cluster: hexcrawler-local"]
+        subgraph NS["namespace: hexcrawler"]
             CRAWLER["Pod: crawler-worker"]
             DRAGON["Pod: dragonfly"]
         end
-        subgraph TEST_NS["namespace: ipf-test"]
+        subgraph TEST_NS["namespace: hexcrawler-test"]
             SIM["Pod: web-simulator"]
         end
         REG["k3d Registry :5111"]
@@ -55,8 +55,8 @@ Covers: REQ-K8E-010–016
 #!/bin/bash
 set -euo pipefail
 
-CLUSTER_NAME="${K3D_CLUSTER_NAME:-ipf-local}"
-REGISTRY_NAME="${K3D_REGISTRY_NAME:-ipf-registry.localhost}"
+CLUSTER_NAME="${K3D_CLUSTER_NAME:-hexcrawler-local}"
+REGISTRY_NAME="${K3D_REGISTRY_NAME:-hexcrawler-registry.localhost}"
 REGISTRY_PORT="${K3D_REGISTRY_PORT:-5111}"
 SERVERS="${K3D_SERVERS:-1}"
 AGENTS="${K3D_AGENTS:-2}"
@@ -97,8 +97,8 @@ kubectl get nodes
 #!/bin/bash
 set -euo pipefail
 
-CLUSTER_NAME="${K3D_CLUSTER_NAME:-ipf-local}"
-REGISTRY_NAME="${K3D_REGISTRY_NAME:-ipf-registry.localhost}"
+CLUSTER_NAME="${K3D_CLUSTER_NAME:-hexcrawler-local}"
+REGISTRY_NAME="${K3D_REGISTRY_NAME:-hexcrawler-registry.localhost}"
 
 k3d cluster delete "$CLUSTER_NAME" 2>/dev/null || true
 k3d registry delete "k3d-${REGISTRY_NAME}" 2>/dev/null || true
@@ -112,15 +112,15 @@ echo "Cleanup complete."
 #!/bin/bash
 set -euo pipefail
 
-REGISTRY="k3d-ipf-registry.localhost:5111"
+REGISTRY="k3d-hexcrawler-registry.localhost:5111"
 TAG="${1:-$(git rev-parse --short HEAD)}"
 
-docker build -f infra/docker/Dockerfile -t "$REGISTRY/ipf-crawler:$TAG" .
-docker push "$REGISTRY/ipf-crawler:$TAG"
+docker build -f infra/docker/Dockerfile -t "$REGISTRY/hexcrawler:$TAG" .
+docker push "$REGISTRY/hexcrawler:$TAG"
 
 docker build -f infra/docker/Dockerfile.web-simulator \
-  -t "$REGISTRY/ipf-web-simulator:$TAG" .
-docker push "$REGISTRY/ipf-web-simulator:$TAG"
+  -t "$REGISTRY/hexcrawler-web-simulator:$TAG" .
+docker push "$REGISTRY/hexcrawler-web-simulator:$TAG"
 
 echo "Images pushed with tag: $TAG"
 ```
@@ -146,7 +146,7 @@ patches:
         value: 1
       - op: replace
         path: /spec/template/spec/containers/0/image
-        value: k3d-ipf-registry.localhost:5111/ipf-crawler:latest
+        value: k3d-hexcrawler-registry.localhost:5111/hexcrawler:latest
       - op: replace
         path: /spec/template/spec/containers/0/resources/limits/cpu
         value: 500m

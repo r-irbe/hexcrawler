@@ -5,9 +5,9 @@
 import Fastify from 'fastify';
 import type { FastifyInstance, FastifyRequest } from 'fastify';
 import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify';
-import { appRouter } from '@ipf/api-router/router';
-import type { CrawlService } from '@ipf/api-router/trpc';
-import { createContext } from '@ipf/api-router/trpc';
+import { appRouter } from '@hexcrawler/api-router/router';
+import type { CrawlService } from '@hexcrawler/api-router/trpc';
+import { createContext } from '@hexcrawler/api-router/trpc';
 
 export type ServerOptions = {
   readonly host: string;

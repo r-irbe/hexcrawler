@@ -2,10 +2,10 @@
 // Implements: T-CRAWL-011, REQ-CRAWL-014, REQ-CRAWL-015
 
 import { ok, err } from 'neverthrow';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { Frontier, FrontierEntry } from '@ipf/core/contracts/frontier';
-import { createQueueError, type CrawlError } from '@ipf/core/errors/crawl-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { Frontier, FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import { createQueueError, type CrawlError } from '@hexcrawler/core/errors/crawl-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import type { CrawlFrontierEntry } from './crawl-types.js';
 
 /**

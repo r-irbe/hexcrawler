@@ -3,10 +3,10 @@
 
 import { describe, it, expect } from 'vitest';
 import { ok, err } from 'neverthrow';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
 import { discoverLinks, adaptLinkExtractor, type ResultLinkExtractor } from './discover-stage.js';
 import type { CrawlFetchResult } from './crawl-types.js';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 
 function nopLogger(): Logger {
   const nop = (): void => { /* nop */ };

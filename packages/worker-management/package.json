@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/worker-management",
+  "name": "@hexcrawler/worker-management",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -16,14 +16,14 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@ipf/core": "workspace:*",
+    "@hexcrawler/core": "workspace:*",
     "neverthrow": "^8.2.0"
   },
   "devDependencies": {
     "@fast-check/vitest": "^0.4.0",
-    "@ipf/eslint-config": "workspace:*",
-    "@ipf/job-queue": "workspace:*",
-    "@ipf/testing": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
+    "@hexcrawler/job-queue": "workspace:*",
+    "@hexcrawler/testing": "workspace:*",
     "@types/node": "^25.6.0",
     "bullmq": "^5.74.1",
     "eslint": "^10.2.0",

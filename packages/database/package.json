@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/database",
+  "name": "@hexcrawler/database",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -42,8 +42,8 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
-    "@ipf/testing": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
+    "@hexcrawler/testing": "workspace:*",
     "@types/node": "^22.19.17",
     "@types/pg": "^8.20.0",
     "eslint": "^10.2.0",

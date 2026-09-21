@@ -48,7 +48,7 @@ describe('Chaos: Pod Kill E2E', () => {
     expect(podsAfter).not.toContain(targetPod);
 
     // Wait for deployment to stabilize
-    await waitForDeployment('crawler-worker', 'ipf', 60);
+    await waitForDeployment('crawler-worker', 'hexcrawler', 60);
   }, 120_000);
 
   // Validates REQ-PROD-003: Redis (Dragonfly) failure → workers reconnect within 30s
@@ -60,7 +60,7 @@ describe('Chaos: Pod Kill E2E', () => {
     if (dragonflyPod === undefined) throw new Error('No dragonfly pods found');
 
     // Kill dragonfly pod
-    await killPod(dragonflyPod, 'ipf');
+    await killPod(dragonflyPod, 'hexcrawler');
 
     // Wait for dragonfly to restart
     await waitForReadyReplicas('dragonfly', 1, 60_000);
@@ -128,7 +128,7 @@ describe('Chaos: Pod Kill E2E', () => {
 
     // Wait for recovery
     await waitForReadyReplicas('crawler-worker', 1, 60_000);
-    await waitForDeployment('crawler-worker', 'ipf', 60);
+    await waitForDeployment('crawler-worker', 'hexcrawler', 60);
 
     // Verify system recovered — metrics endpoint is reachable
     const afterMetrics = await fetchMetricsText(ctx.crawlerMetricsPort);

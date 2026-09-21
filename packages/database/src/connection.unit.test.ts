@@ -74,7 +74,7 @@ describe('S3ConfigSchema', () => {
   it('parses valid MinIO config', () => {
     const result = S3ConfigSchema.safeParse({
       endpoint: 'http://localhost:9000',
-      bucket: 'ipf-crawl-pages',
+      bucket: 'hexcrawler-crawl-pages',
       accessKeyId: 'minioadmin',
       secretAccessKey: 'minioadmin',
     });

@@ -4,16 +4,16 @@ apiVersion: chaos-mesh.org/v1alpha1
 kind: PodChaos
 metadata:
   name: crawler-pod-kill
-  namespace: ipf
+  namespace: hexcrawler
   labels:
-    app.kubernetes.io/part-of: ipf-chaos-suite
+    app.kubernetes.io/part-of: hexcrawler-chaos-suite
     chaos-type: pod-kill
 spec:
   action: pod-kill
   mode: one
   selector:
     namespaces:
-      - ipf
+      - hexcrawler
     labelSelectors:
       app: crawler-worker
   duration: "5m"

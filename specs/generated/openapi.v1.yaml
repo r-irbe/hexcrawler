@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: IPF Crawler API
-  description: Public API for the IPF distributed web crawler. Submit crawl jobs, monitor status, and check service health.
+  title: hexcrawler API
+  description: Public API for hexcrawler. Submit crawl jobs, monitor status, and check service health.
   version: v1
 tags:
   - name: Crawl

@@ -1,3 +1,3 @@
-import config from '@ipf/eslint-config';
+import config from '@hexcrawler/eslint-config';
 
 export default config;

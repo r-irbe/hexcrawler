@@ -3,12 +3,12 @@
 
 import { Queue, type ConnectionOptions } from 'bullmq';
 import { ok, err } from 'neverthrow';
-import type { AsyncResult } from '@ipf/core/types/result';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import { createQueueError } from '@ipf/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import { createQueueError } from '@hexcrawler/core/errors/queue-error';
 import type { BullMQConnection, QueueConfig } from './connection-config.js';
 
-// SYNC: must match @ipf/completion-detection/src/control-plane-adapter.ts QueueAdapter.
+// SYNC: must match @hexcrawler/completion-detection/src/control-plane-adapter.ts QueueAdapter.
 // Mirrored here to avoid circular dependency (job-queue → completion-detection → job-queue).
 // Integration tests in completion-detection verify structural compatibility at compile time.
 export type QueueAdapter = {

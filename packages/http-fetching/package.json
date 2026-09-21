@@ -1,5 +1,5 @@
 {
-  "name": "@ipf/http-fetching",
+  "name": "@hexcrawler/http-fetching",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -19,14 +19,14 @@
     "clean": "rm -rf dist .turbo"
   },
   "dependencies": {
-    "@ipf/core": "workspace:*",
-    "@ipf/ssrf-guard": "workspace:*",
+    "@hexcrawler/core": "workspace:*",
+    "@hexcrawler/ssrf-guard": "workspace:*",
     "neverthrow": "^8.2.0",
     "tldts": "^6.1.86"
   },
   "devDependencies": {
-    "@ipf/eslint-config": "workspace:*",
-    "@ipf/testing": "workspace:*",
+    "@hexcrawler/eslint-config": "workspace:*",
+    "@hexcrawler/testing": "workspace:*",
     "@types/node": "^25.6.0",
     "eslint": "^10.2.0",
     "typescript": "^6.0.2",

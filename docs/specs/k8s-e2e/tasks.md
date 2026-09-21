@@ -23,7 +23,7 @@
 ## Phase 3: K8s E2E Overlay
 
 - [x] **T-K8E-010**: Create `infra/k8s/overlays/e2e/kustomization.yml` — E2E overlay with reduced resources → REQ-K8E-009
-- [x] **T-K8E-011**: Create `infra/k8s/overlays/e2e/web-simulator.yml` — Pod manifest for simulator in ipf-test namespace → REQ-K8E-016
+- [x] **T-K8E-011**: Create `infra/k8s/overlays/e2e/web-simulator.yml` — Pod manifest for simulator in hexcrawler-test namespace → REQ-K8E-016
 - [x] **T-K8E-012**: Verify Kustomize build for E2E overlay renders correctly → REQ-K8E-005 — *scripts/verify-kustomize-e2e.sh*
 
 ## Phase 4: E2E Test Helpers

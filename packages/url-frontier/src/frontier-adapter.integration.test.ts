@@ -5,12 +5,12 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createClient, type RedisClientType } from 'redis';
 import { ok } from 'neverthrow';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
 import type { QueueBackend, JobSpec, BulkAddResult } from './queue-backend.js';
-import type { QueueError } from '@ipf/core/errors/queue-error';
-import type { AsyncResult } from '@ipf/core/types/result';
+import type { QueueError } from '@hexcrawler/core/errors/queue-error';
+import type { AsyncResult } from '@hexcrawler/core/types/result';
 import { createFrontierAdapter } from './frontier-adapter.js';
-import type { FrontierEntry } from '@ipf/core/contracts/frontier';
+import type { FrontierEntry } from '@hexcrawler/core/contracts/frontier';
 
 /**
  * Redis-backed QueueBackend for integration testing.

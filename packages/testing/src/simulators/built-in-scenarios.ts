@@ -117,7 +117,7 @@ export const robotsTxtBlockRoute: SimulatorRoute = {
       'Disallow: /private',
       'Crawl-delay: 1',
       '',
-      'User-agent: ipf-crawler',
+      'User-agent: hexcrawler',
       'Disallow: /secret',
       'Allow: /admin/public',
     ].join('\n'),

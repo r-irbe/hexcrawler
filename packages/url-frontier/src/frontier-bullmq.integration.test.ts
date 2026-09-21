@@ -4,12 +4,12 @@
 
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { Queue, Worker, type ConnectionOptions } from 'bullmq';
-import { startRedisContainer, type ManagedRedisContainer } from '@ipf/testing/containers/redis';
-import { BullMQConnectionSchema, QueueConfigSchema } from '@ipf/job-queue/connection-config';
-import { createBullMQQueueBackend } from '@ipf/job-queue/bullmq-queue-backend';
+import { startRedisContainer, type ManagedRedisContainer } from '@hexcrawler/testing/containers/redis';
+import { BullMQConnectionSchema, QueueConfigSchema } from '@hexcrawler/job-queue/connection-config';
+import { createBullMQQueueBackend } from '@hexcrawler/job-queue/bullmq-queue-backend';
 import { createFrontierAdapter } from './frontier-adapter.js';
-import type { FrontierEntry } from '@ipf/core/contracts/frontier';
-import type { BullMQConnection } from '@ipf/job-queue/connection-config';
+import type { FrontierEntry } from '@hexcrawler/core/contracts/frontier';
+import type { BullMQConnection } from '@hexcrawler/job-queue/connection-config';
 
 let redis: ManagedRedisContainer;
 let connection: BullMQConnection;

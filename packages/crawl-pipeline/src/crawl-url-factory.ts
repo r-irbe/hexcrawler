@@ -2,13 +2,13 @@
 // Implements: T-CRAWL-003, T-CRAWL-004, REQ-CRAWL-001, REQ-CRAWL-003, REQ-CRAWL-004
 
 import { ok, err, type Result } from 'neverthrow';
-import { createCrawlUrl, type CrawlUrl } from '@ipf/core/domain/crawl-url';
+import { createCrawlUrl, type CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
 import {
   createEmptyUrlError,
   createDisallowedSchemeError,
   createInvalidUrlError,
   type UrlError,
-} from '@ipf/core/errors/url-error';
+} from '@hexcrawler/core/errors/url-error';
 import { normalizeUrl } from './url-normalizer.js';
 
 const ALLOWED_SCHEMES = new Set(['http:', 'https:']);

@@ -14,7 +14,7 @@ import { fc, test as fcTest } from '@fast-check/vitest';
 // import { myFunction } from './my-module';
 
 // Import custom arbitraries from generators:
-// import { arbMyType } from '@ipf/testing/generators/my-type.generator';
+// import { arbMyType } from '@hexcrawler/testing/generators/my-type.generator';
 
 describe('Feature: <feature-name> properties', () => {
   // Property for REQ-XXX-NNN: <paste EARS shall clause here>

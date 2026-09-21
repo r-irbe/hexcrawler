@@ -33,7 +33,7 @@ Created new `packages/database/` package (17th in monorepo) with Drizzle ORM + A
 2. **Port location**: Repository interfaces in `packages/database/` instead of `packages/core/` — avoids Tier 3 cross-package change. Documented as deferral.
 3. **BigInt IDs**: Matches PostgreSQL BIGINT. JSON serialization caveat documented — convert at API boundary.
 4. **`_tag` convention**: New packages use `_tag` per AGENTS.md. Core's `kind` is acknowledged legacy.
-5. **T-DATA-024/025 already done**: `@ipf/config` already has DATABASE_URL, S3_ENDPOINT, etc.
+5. **T-DATA-024/025 already done**: `@hexcrawler/config` already has DATABASE_URL, S3_ENDPOINT, etc.
 6. **T-DATA-020 bonus**: Added PageContentRepository interface since it's a pure port (no infra).
 
 ## RALPH Review Findings

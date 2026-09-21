@@ -5,12 +5,12 @@
 
 set -euo pipefail
 
-CLUSTER_NAME="${K3D_CLUSTER_NAME:-ipf-local}"
-REGISTRY_NAME="${K3D_REGISTRY_NAME:-ipf-registry.localhost}"
+CLUSTER_NAME="${K3D_CLUSTER_NAME:-hexcrawler-local}"
+REGISTRY_NAME="${K3D_REGISTRY_NAME:-hexcrawler-registry.localhost}"
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   IPF Local Kubernetes Teardown          ║"
+echo "║   hexcrawler local Kubernetes Teardown          ║"
 echo "╚══════════════════════════════════════════╝"
 echo ""
 

@@ -127,13 +127,13 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: web-simulator
-  namespace: ipf-test
+  namespace: hexcrawler-test
   labels:
     app: web-simulator
 spec:
   containers:
     - name: simulator
-      image: k3d-ipf-registry.localhost:5111/ipf-web-simulator:latest
+      image: k3d-hexcrawler-registry.localhost:5111/hexcrawler-web-simulator:latest
       ports:
         - containerPort: 8080
       env:

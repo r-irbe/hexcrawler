@@ -3,13 +3,13 @@
 // Wraps discoverLinks and publishes URLDiscovered events via batch
 
 import type { Result } from 'neverthrow';
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
-import type { CrawlError } from '@ipf/core/errors/crawl-error';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
+import type { CrawlError } from '@hexcrawler/core/errors/crawl-error';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { discoverLinks, type ResultLinkExtractor } from './discover-stage.js';
 import type { CrawlFetchResult } from './crawl-types.js';
 
-// --- Minimal event types (structural, avoids coupling to @ipf/redis) ---
+// --- Minimal event types (structural, avoids coupling to @hexcrawler/redis) ---
 
 export type DiscoveryEvent = {
   readonly type: string;

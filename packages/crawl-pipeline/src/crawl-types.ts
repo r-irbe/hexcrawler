@@ -1,7 +1,7 @@
 // Pipeline data types — FrontierEntry, CrawlFetchResult, CrawlResult, LinkExtractError
 // Implements: T-CRAWL-005, T-CRAWL-006, T-CRAWL-007, T-CRAWL-022, T-CRAWL-023
 
-import type { CrawlUrl } from '@ipf/core/domain/crawl-url';
+import type { CrawlUrl } from '@hexcrawler/core/domain/crawl-url';
 import type { NormalizedUrl } from './normalized-url.js';
 
 // --- Frontier Entry (richer than core's minimal FrontierEntry) ---

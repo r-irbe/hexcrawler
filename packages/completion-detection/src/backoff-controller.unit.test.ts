@@ -2,7 +2,7 @@
 // Validates REQ-DIST-015
 
 import { describe, it, expect } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createBackoffController, DEFAULT_BACKOFF_CONFIG } from './backoff-controller.js';
 import type { BackoffConfig } from './backoff-controller.js';
 

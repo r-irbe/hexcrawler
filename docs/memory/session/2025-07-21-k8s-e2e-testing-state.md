@@ -38,7 +38,7 @@
 | Last completed gate | G7 (state update) |
 | Guard function status | `PASS` (typecheck 13/13, lint 13/13, test 13/13) |
 | Commits on branch | 1 (b58baf3) |
-| Tests passing | 42/42 (@ipf/testing), all packages green |
+| Tests passing | 42/42 (@hexcrawler/testing), all packages green |
 | Blockers | none |
 
 ## Decisions Log

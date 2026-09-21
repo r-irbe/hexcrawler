@@ -2,7 +2,7 @@
 // Validates: REQ-CRAWL-007 (depth guard), REQ-CRAWL-008 (domain allow-list)
 
 import { describe, it, expect } from 'vitest';
-import { createCrawlUrl } from '@ipf/core/domain/crawl-url';
+import { createCrawlUrl } from '@hexcrawler/core/domain/crawl-url';
 import { validateEntry } from './validate-stage.js';
 import type { CrawlFrontierEntry, ValidateConfig } from './crawl-types.js';
 

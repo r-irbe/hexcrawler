@@ -78,7 +78,7 @@
       "targets": [
         {
           "queryType": "search",
-          "service": "ipf-crawler",
+          "service": "hexcrawler",
           "tags": "error=true",
           "limit": 20
         }

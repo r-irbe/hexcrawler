@@ -44,7 +44,7 @@ Covers: REQ-INFRA-001 (multi-stage), REQ-INFRA-002 (non-root), REQ-INFRA-003 (`.
 ```mermaid
 graph TD
     subgraph K8s["Kubernetes Cluster"]
-        subgraph NS["ipf namespace"]
+        subgraph NS["hexcrawler namespace"]
             DEP[Deployment: crawler-worker]
             SVC[Service: crawler-metrics]
             HPA[HPA: scale on CPU/memory]
@@ -130,7 +130,7 @@ scrape_configs:
     kubernetes_sd_configs:
       - role: pod
         namespaces:
-          names: ['ipf']
+          names: ['hexcrawler']
     relabel_configs:
       - source_labels: [__meta_kubernetes_pod_label_app]
         regex: crawler-worker

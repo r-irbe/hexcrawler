@@ -10,7 +10,7 @@
 
 ## Summary
 
-Created the `@ipf/redis` package implementing Redis Streams event infrastructure: a publisher (XADD) and consumer (XREADGROUP consumer groups) following the port/adapter pattern with `neverthrow` Result types.
+Created the `@hexcrawler/redis` package implementing Redis Streams event infrastructure: a publisher (XADD) and consumer (XREADGROUP consumer groups) following the port/adapter pattern with `neverthrow` Result types.
 
 ## Changes
 
@@ -29,7 +29,7 @@ Created the `@ipf/redis` package implementing Redis Streams event infrastructure
 
 ## Decisions
 
-1. **Standalone package** — `@ipf/redis` has no dependency on `@ipf/core` or `@ipf/api-router`. StreamEvent type is generic, not tied to domain events.
+1. **Standalone package** — `@hexcrawler/redis` has no dependency on `@hexcrawler/core` or `@hexcrawler/api-router`. StreamEvent type is generic, not tied to domain events.
 2. **Factory functions over classes** — `createRedisStreamPublisher()` / `createRedisStreamConsumer()` return plain objects implementing typed interfaces.
 3. **XAUTOCLAIM via redis.call()** — ioredis lacks typed XAUTOCLAIM; used `redis.call()` with `XAutoClaimResult` type assertion.
 4. **MAXLEN approximate trimming** — Default 100K entries with `~` for O(1) amortized trimming.
@@ -43,7 +43,7 @@ Created the `@ipf/redis` package implementing Redis Streams event infrastructure
 
 ## Test Results
 
-- 31 new unit tests in @ipf/redis
+- 31 new unit tests in @hexcrawler/redis
 - 1080 total tests passing across 17 packages
 
 ## Service Communication Progress

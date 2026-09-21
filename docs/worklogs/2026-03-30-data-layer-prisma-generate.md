@@ -32,7 +32,7 @@ Completed Prisma typed client generation (T-DATA-007) and initial migration crea
 1. **Generated files not committed** — `src/generated/` is 22MB of runtime code. Added to `.gitignore`. Regenerated via `pnpm build` or `pnpm db:generate`.
 2. **Build = prisma generate** — Turbo dependency chain (`typecheck.dependsOn: ["^build"]`) ensures generated client exists before type checking.
 3. **Migration created offline** — Used `prisma migrate diff --from-empty --to-schema-datamodel` to create SQL without a live database.
-4. **Re-export module** — `prisma-client.ts` abstracts the generated import path so consumers use `@ipf/database/prisma`.
+4. **Re-export module** — `prisma-client.ts` abstracts the generated import path so consumers use `@hexcrawler/database/prisma`.
 
 ## RALPH Review
 

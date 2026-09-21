@@ -2,7 +2,7 @@
 // Validates REQ-DIST-023, REQ-DIST-026, REQ-DIST-027
 
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import type { Logger } from '@ipf/core/contracts/logger';
+import type { Logger } from '@hexcrawler/core/contracts/logger';
 import { createLeaderElection } from './leader-election.js';
 import type { LeaseStore, LeaderElectionConfig } from './leader-election.js';
 

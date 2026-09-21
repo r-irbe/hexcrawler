@@ -5,7 +5,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-datasources
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: grafana
 data:
@@ -46,14 +46,14 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-dashboard-provider
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: grafana
 data:
   dashboards.yaml: |
     apiVersion: 1
     providers:
-      - name: "IPF Crawler"
+      - name: "hexcrawler"
         orgId: 1
         folder: ""
         type: file
@@ -67,7 +67,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: grafana
 spec:
@@ -144,7 +144,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: grafana
-  namespace: ipf
+  namespace: hexcrawler
   labels:
     app: grafana
 spec:

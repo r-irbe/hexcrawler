@@ -7,7 +7,7 @@ import {
   Histogram,
   Gauge,
 } from 'prom-client';
-import type { CrawlMetrics } from '@ipf/core/contracts/crawl-metrics';
+import type { CrawlMetrics } from '@hexcrawler/core/contracts/crawl-metrics';
 
 // G8-F-003: Allowlist prevents unbounded label cardinality (Prometheus anti-pattern)
 const ALLOWED_FETCH_STATUSES = new Set(['success', 'error', 'timeout', 'blocked', 'skipped']);
