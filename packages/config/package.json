@@ -23,6 +23,6 @@
     "@hexcrawler/eslint-config": "workspace:*",
     "eslint": "^10.2.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.11"
   }
 }
