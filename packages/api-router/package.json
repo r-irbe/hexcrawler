@@ -22,7 +22,7 @@
     "@opentelemetry/api": "^1.9.1",
     "@trpc/server": "^11.16.0",
     "neverthrow": "^8.2.0",
-    "zod": "^3.25.76"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@hexcrawler/eslint-config": "workspace:*",

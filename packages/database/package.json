@@ -39,7 +39,7 @@
     "drizzle-orm": "^0.45.2",
     "neverthrow": "^8.2.0",
     "pg": "^8.20.0",
-    "zod": "^3.25.76"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@hexcrawler/eslint-config": "workspace:*",
