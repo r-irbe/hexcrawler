@@ -21,7 +21,7 @@
     "cockatiel": "^3.2.1",
     "ioredis": "^5.10.1",
     "neverthrow": "^8.2.0",
-    "zod": "^3.25.76"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@hexcrawler/eslint-config": "workspace:*",
