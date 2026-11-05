@@ -44,6 +44,8 @@ scripts/teardown-local.sh
 
 ## Adapt to Your Use Case (Customer Journeys)
 
+![How hexcrawler Blocks SSRF Redirect Chains & Isolates Failing Domains](docs/assets/mechanics.png)
+
 <details open>
 <summary><b>1. Security-Conscious SaaS Teams -- Fetching Untrusted User URLs Safely</b></summary>
 
